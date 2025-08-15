@@ -418,7 +418,7 @@ ul {
   margin-bottom: var(--space-lg);
   line-height: 1.2;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: var(--salmon-pink-dark);
+  color: var(--white);
 }
 
 .hero-subtitle {
@@ -427,6 +427,7 @@ ul {
   font-weight: 300;
   max-width: 600px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  color: var(--dark-gray);
 }
 
 .hero-buttons {
