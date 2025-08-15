@@ -251,6 +251,7 @@ ul {
   justify-content: space-between;
   padding: 15px 0;
   transition: var(--transition-medium);
+  flex-wrap: wrap;
 }
 .header.scrolled .main-navigation {
   padding: 10px 0;
@@ -830,7 +831,6 @@ ul {
   z-index: 1;
   transition: var(--transition-medium);
 }
-
 
 .card-front:hover .service-hover-content {
   opacity: 1;
@@ -1585,7 +1585,9 @@ ul {
 /* ADD THIS NEW RULE for the bolded title */
 .tip-list li strong {
   flex-shrink: 0; /* Prevents the bold text from shrinking */
-  margin-right: var(--space-sm); /* Adds space between the title and description */
+  margin-right: var(
+    --space-sm
+  ); /* Adds space between the title and description */
   width: 100px; /* Gives the title a fixed width for perfect alignment */
 }
 
@@ -2339,15 +2341,6 @@ ul {
     flex-direction: column;
     gap: var(--space-xl);
   }
-}
-
-/* For Large Phones and Small Tablets */
-@media (max-width: 768px) {
-  /* --- Base & Typography --- */
-  .section-title {
-    font-size: 28px;
-  }
-  
   /* --- Header & Navigation --- */
   .logo-img {
     width: 50px;
@@ -2368,7 +2361,7 @@ ul {
     right: -100%;
     width: 80%;
     max-width: 320px;
-    height: 100vh;
+    height: 100%; /* CHANGED from 100vh */
     background-color: var(--white);
     flex-direction: column;
     align-items: flex-start;
@@ -2377,7 +2370,9 @@ ul {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding-top: 80px;
+    overflow-y: auto; /* ADDED: This is the magic line for scrolling */
   }
+  
   .nav-list.active {
     right: 0;
   }
@@ -2392,6 +2387,16 @@ ul {
     border-bottom: 1px solid var(--lightest-gray);
     border-radius: 0;
   }
+}
+
+/* For Large Phones and Small Tablets */
+@media (max-width: 768px) {
+  /* --- Base & Typography --- */
+  .section-title {
+    font-size: 28px;
+  }
+
+  
 
   /* --- Hero Section --- */
   .hero {
@@ -2421,7 +2426,7 @@ ul {
   .tip-text {
     font-size: 14px;
   }
-  
+
   /* --- Sections --- */
   .doctors-container {
     gap: var(--space-xl);
@@ -2575,7 +2580,6 @@ body {
 * {
   -webkit-tap-highlight-color: transparent;
 }
-
 
 /* Ensure buttons have proper touch target size */
 .btn,
