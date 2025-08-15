@@ -365,14 +365,16 @@ ul {
 }
 
 /* Hero Section */
+/* Find and REPLACE this rule in your styles.css */
+
 .hero {
-  position: relative;
-  height: 100vh;
-  min-height: 800px;
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-  overflow: hidden;
+    position: relative;
+    height: 100vh;
+    min-height: 800px;
+    display: grid; /* CHANGED from flex to grid */
+    place-items: center; /* ADDED this for perfect centering */
+    padding-top: 80px;
+    overflow: hidden;
 }
 
 .hero-overlay {
@@ -405,12 +407,24 @@ ul {
   object-fit: cover;
 }
 
+/* Find and REPLACE this rule in your styles.css */
+
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  color: var(--white);
-  animation-delay: 0.3s;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    color: var(--white);
+    animation-delay: 0.3s;
+    display: flex;             /* ADD THIS: Activates flexbox */
+    flex-direction: column;    /* ADD THIS: Stacks items vertically */
+    align-items: center;       /* ADD THIS: Centers items horizontally */
+    text-align: center;        /* ADD THIS: Centers the text within the items */
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-title {
