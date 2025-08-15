@@ -11,11 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navList = document.querySelector('.nav-list');
+    const menuOverlay = document.getElementById('menu-overlay'); // ADD THIS LINE
+    const backToTopBtn = document.querySelector('.back-to-top');
+    const heroScrollArrow = document.querySelector('.hero-scroll-down');
+
+
 
     mobileMenuBtn.addEventListener('click', function () {
         this.classList.toggle('active');
         navList.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
+        menuOverlay.classList.toggle('active'); // ADD THIS LINE
+
     });
 
     // Close mobile menu when clicking on a link
@@ -25,48 +32,77 @@ document.addEventListener('DOMContentLoaded', function () {
                 mobileMenuBtn.classList.remove('active');
                 navList.classList.remove('active');
                 document.body.classList.remove('no-scroll');
+                menuOverlay.classList.remove('active'); // ADD THIS LINE
+
             }
         });
     });
 
     // Sticky Header
     const header = document.querySelector('.header');
+    // ▼▼▼ PASTE THIS ENTIRE NEW BLOCK HERE ▼▼▼
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 100) {
+    // Single scroll event handler for performance
+    function handleScroll() {
+        const scrollPosition = window.scrollY;
+
+        // Sticky Header Logic
+        if (scrollPosition > 100) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-    });
 
-    // Smooth Scrolling for Navigation Links
+        // Back to Top Button Logic
+        if (backToTopBtn && scrollPosition > 300) {
+            backToTopBtn.classList.add('visible');
+        } else if (backToTopBtn) {
+            backToTopBtn.classList.remove('visible');
+        }
+
+        // Hide Hero Scroll Arrow Logic
+        if (heroScrollArrow) {
+            if (scrollPosition > 200) {
+                heroScrollArrow.classList.add('fade-out');
+            } else {
+                heroScrollArrow.classList.remove('fade-out');
+            }
+        }
+
+        // Animate on Scroll Logic
+        animateOnScroll();
+    }
+
+    // Attach the single scroll listener
+    window.addEventListener('scroll', handleScroll);
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+                // Check if we are on a mobile device
+                if (window.innerWidth <= 768) {
+                    // Mobile logic: wait for menu to close, then scroll
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70, // Mobile header offset
+                            behavior: 'smooth'
+                        });
+                    }, 300);
+                } else {
+                    // Desktop logic: scroll immediately
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Desktop header offset
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
 
-    // Back to Top Button
-    const backToTopBtn = document.querySelector('.back-to-top');
-
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('visible');
-        } else {
-            backToTopBtn.classList.remove('visible');
-        }
-    });
 
     // Service Modal Functionality
     const learnMoreBtns = document.querySelectorAll('.learn-more');
@@ -234,7 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Run on load and scroll
     window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
 
     // Initialize first tab as active
     if (tabBtns.length > 0) {
@@ -262,4 +297,37 @@ document.addEventListener('DOMContentLoaded', function () {
             // The smooth scroll will be handled by the existing script for 'a[href^="#"]'
         });
     });
-});
+
+
+    // 1. Handle viewport scaling on iOS
+    function setViewportScale() {
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport && window.innerWidth <= 480) {
+            viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0';
+        }
+    }
+    setViewportScale();
+    window.addEventListener('resize', setViewportScale);
+
+    // 2. Better touch feedback for buttons
+    document.querySelectorAll('.btn, .nav-link, .tab-btn').forEach(button => {
+        button.addEventListener('touchstart', function () {
+            this.classList.add('active-touch');
+        });
+        button.addEventListener('touchend', function () {
+            this.classList.remove('active-touch');
+        });
+    });
+
+    // 3. Prevent zooming on double-tap
+    let lastTap = 0;
+    document.addEventListener('touchend', function (event) {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+        if (tapLength < 300 && tapLength > 0) {
+            event.preventDefault();
+        }
+        lastTap = currentTime;
+    }, false);
+
+}); // This is the final closing brace of your file
