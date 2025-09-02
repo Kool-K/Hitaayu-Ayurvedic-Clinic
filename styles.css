@@ -163,6 +163,12 @@ ul {
   font-size: 20px;
 }
 
+/* Add this new rule for the trademark logo */
+.trademark-logo {
+  margin: var(--space-md) auto;
+  max-width: 150px;
+}
+
 /* Button Styles */
 /* AFTER */
 .btn {
@@ -689,6 +695,7 @@ ul {
 .clinic-info-left p {
   color: var(--medium-gray);
   line-height: 1.8;
+  text-align: center;
 }
 
 .clinic-info-right {
@@ -713,6 +720,35 @@ ul {
   font-size: 14px;
   color: var(--medium-gray);
   font-weight: 500;
+}
+
+/* Add this new block at the end of the .about section styles */
+
+.specializations-info {
+  max-width: 1000px;
+  margin: var(--space-xxl) auto 0 auto;
+  padding: var(--space-xl);
+  background-color: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--forest-green-light);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.specializations-info h3 {
+  font-size: 24px;
+  margin-bottom: var(--space-md);
+  color: var(--sapphire);
+}
+
+.specializations-info p {
+  color: var(--medium-gray);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+.specializations-info p:last-child {
+  margin-bottom: 0;
 }
 
 /* Services Section */
@@ -1182,6 +1218,7 @@ ul {
   gap: var(--space-xl);
   position: relative;
   z-index: 1;
+  align-items: start;
 }
 
 .product-card {
