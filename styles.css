@@ -1159,7 +1159,7 @@ ul {
   gap: var(--space-xl);
   position: relative;
   z-index: 1;
-  align-items: start;
+  align-items:start;
 }
 
 .product-card {
@@ -1216,11 +1216,14 @@ ul {
   color: var(--text-color-light);
   margin-bottom: var(--space-lg);
   flex-grow: 1; /* Allows this to take up available space */
+  min-height: 90px;
 }
 
 /* --- Expandable Details --- */
 .product-details-btn {
   width: 100%;
+  justify-content: center;
+  gap: var(--space-sm);
 }
 
 .product-details {
