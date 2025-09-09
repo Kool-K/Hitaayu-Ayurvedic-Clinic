@@ -42,14 +42,14 @@
     <div class="container">
         <div class="main-navigation">
             <div class="logo">
-                <div class="logo-img">
-                    <img src="assets/logo.png" alt="Hitaayu Logo"/>
-                </div>
-                <div class="logo-text">
-                    <h1>Hitaayu</h1>
-                    <!-- <span><strong>|| सर्वे सन्तु निरामयाः ||</strong>-<i><b>May all be free from illness, in body and mind.</b></i></span> -->
-                </div>
-            </div>
+              <div class="logo-img">
+                  <img src="assets/logo.png" alt="Hitaayu Logo"/>
+              </div>
+              <div class="logo-text">
+                  <h1>Hitaayu</h1>
+                  <span class="logo-tagline">|| सर्वे सन्तु निरामयाः || -  May all be free from illness</span>
+              </div>
+          </div>
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
@@ -76,28 +76,22 @@
     <section id="home" class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-video">
-        <video autoplay muted loop>
+        <video autoplay muted loop poster="assets/hero-fallback2.png">
           <source src="assets/hero-video.mp4" type="video/mp4" />
-          <!-- Fallback image -->
-          <img src="assets/hero-fallback.jpg" alt="Ayurvedic Herbs" />
+          Your browser does not support the video tag.
         </video>
       </div>
       <div class="container">
         <div class="hero-content animate__animated animate__fadeInUp">
-          <h2 class="hero-title">Rediscover Your Health Through Ancient Wisdom</h2>
-          <p class="hero-subtitle">
-            Premium Ayurvedic treatments personalized for your unique
-            constitution
-          </p>
-          <div class="hero-buttons">
-            <a href="#services" class="btn btn-primary btn-lg"
-              >Explore Services</a
-            >
-            <a href="#contact" class="btn btn-outline btn-lg"
-              >Book Consultation</a
-            >
-          </div>
+        <h2 class="hero-title">Rediscover Your Health Through Ancient Wisdom</h2>
+        <p class="hero-subtitle">
+          <strong>HITAAYU</strong> - Health In Totality with Ayurved and Yoga United.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
+          <a href="#contact" class="btn btn-outline btn-lg">Book Consultation</a>
         </div>
+      </div>
         <div class="doctor-tip">
           <div class="tip-container">
             <span class="tip-icon"><i class="fas fa-lightbulb"></i></span>
@@ -133,7 +127,7 @@
           <div class="doctor-card animate__animated" data-animation="fadeInUp">
             <div class="doctor-img-container">
               <div class="doctor-img">
-                <img src="assets/doctor-1.jpg" alt="Dr. Shilpa Kulkarni" />
+                <img src="assets/mom.jpg" alt="Dr. Shilpa Kulkarni" />
               </div>
               <div class="doctor-img-border"></div>
               <div class="doctor-img-pattern"></div>
@@ -164,7 +158,7 @@
           >
             <div class="doctor-img-container">
               <div class="doctor-img">
-                <img src="assets/doctor-2.jpg" alt="Dr. Sachin Kulkarni" />
+                <img src="assets/papa.jpg" alt="Dr. Sachin Kulkarni" />
               </div>
               <div class="doctor-img-border"></div>
               <div class="doctor-img-pattern"></div>
@@ -190,31 +184,42 @@
             </div>
           </div>
         </div>
-        <div class="clinic-info animate__animated" data-animation="fadeInUp">
-          <div class="clinic-info-left">
-            <h3>Our Philosophy</h3>
-            <p>
-              We pursue true <strong>स्वास्थ्य (Health)</strong> by restoring <strong>dosha–dhatu</strong> balance at the root — uniting body and mind. 
-              Care is <strong>personalized</strong>, blending time-honoured therapies 
-              (<em>shaman</em>, <em>shodhan</em>, <em>satvavjay</em>, <em>apunarbhava chikitsa</em>) 
-              with <strong>modern diagnostics methods</strong> and <strong>contemporary wellness</strong> to deliver results that last.
-            </p>
-          </div>
-          <div class="clinic-info-right">
-            <div class="clinic-stat">
-              <span class="stat-number">22+</span>
-              <span class="stat-label">Years of Experience</span>
-            </div>
-            <div class="clinic-stat">
-              <span class="stat-number">6000+</span>
-              <span class="stat-label">Patients Treated</span>
-            </div>
-            <div class="clinic-stat">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Personalised Treatments</span>
-            </div>
-          </div>
-        </div>
+     
+
+        <div class="clinic-info-grid animate__animated" data-animation="fadeInUp">
+  <div class="clinic-card clinic-card-philosophy">
+    <h3>Our Philosophy</h3>
+    <p>
+      We pursue true <strong>स्वास्थ्य (Health)</strong> by restoring <strong>dosha–dhatu</strong> balance at the root — uniting body and mind. 
+      Care is <strong>personalized</strong>, blending time-honoured therapies 
+      (<em>shaman</em>, <em>shodhan</em>, <em>satvavjay</em>, <em>apunarbhava chikitsa</em>) 
+      with <strong>modern diagnostics methods</strong> and <strong>contemporary wellness</strong> to deliver results that last.
+    </p>
+  </div>
+
+  <div class="clinic-card clinic-card-stats">
+    <div class="clinic-stat">
+      <span class="stat-number">22+</span>
+      <span class="stat-label">Years of Experience</span>
+    </div>
+    <div class="clinic-stat">
+      <span class="stat-number">6000+</span>
+      <span class="stat-label">Patients Treated</span>
+    </div>
+    <div class="clinic-stat">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">Personalised Treatments</span>
+    </div>
+  </div>
+
+  <div class="clinic-card clinic-card-approach">
+  <h3>Our Approach</h3>
+  <p>
+    We integrate traditional Ayurvedic wisdom with modern diagnostics to provide holistic, personalized care that addresses the root cause of illness.
+  </p>
+  </div>
+</div>
+    
         <div class="specializations-info animate__animated" data-animation="fadeInUp">
     <h3>Our Specializations</h3>
     <p>
@@ -243,184 +248,321 @@
       </p>
     </div>
     <div class="services-container">
-      <div class="service-card animate__animated" data-animation="fadeInUp">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="service-icon"><img src="assets/panchakarma-icon.svg" alt="Panchakarma" /></div>
-            <h3 class="service-title">Panchakarma</h3>
-            <p class="service-subtitle">Detoxification Therapy</p>
-            <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
-          </div>
-          <div class="card-back">
-            <div class="card-back-content">
-              <h3 class="service-title">Panchakarma</h3>
-              <p class="service-description">A comprehensive detoxification process that eliminates deep-rooted toxins and restores the natural equilibrium of your doshas.</p>
-              <ul class="service-highlights">
-                <li><i class="fas fa-check-circle"></i> 5-step purification process</li>
-                <li><i class="fas fa-check-circle"></i> Customized for your dosha</li>
-                <li><i class="fas fa-check-circle"></i> 7-21 day seasonal programs</li>
-              </ul>
-              <button class="btn btn-outline learn-more" data-service="panchakarma">Explore Treatments</button>
-            </div>
-          </div>
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+    <div class="card-inner">
+      <div class="card-front">
+        <div class="service-icon"><img src="assets/massage-icon.png" alt="Panchakarma" /></div>
+        <h3 class="service-title">Panchakarma</h3>
+        <p class="service-subtitle">Detoxification Therapy</p>
+        <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+      </div>
+      <div class="card-back">
+        <div class="card-back-content">
+          <h3 class="service-title">Panchakarma</h3>
+          <p class="service-description">A comprehensive detoxification process that eliminates deep-rooted toxins and restores the natural equilibrium of your doshas.</p>
+          <ul class="service-highlights">
+            <li><i class="fas fa-check-circle"></i> 5-step purification process</li>
+            <li><i class="fas fa-check-circle"></i> Customized for your dosha</li>
+            <li><i class="fas fa-check-circle"></i> 7-21 day seasonal programs</li>
+          </ul>
+          <button class="btn btn-outline learn-more" data-service="panchakarma">Explore Treatments</button>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="service-card animate__animated" data-animation="fadeInUp" data-delay="0.1s">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="service-icon"><img src="assets/abhyanga-icon.svg" alt="Abhyanga" /></div>
-            <h3 class="service-title">Abhyanga</h3>
-            <p class="service-subtitle">Therapeutic Oil Massage</p>
-            <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
-          </div>
-          <div class="card-back">
-            <div class="card-back-content">
-              <h3 class="service-title">Abhyanga</h3>
-              <p class="service-description">A synchronized warm herbal oil massage that nourishes tissues, improves circulation, and promotes deep relaxation, followed by a gentle herbal steam (Swedana).</p>
-              <ul class="service-highlights">
-                <li><i class="fas fa-check-circle"></i> Uses dosha-specific oils</li>
-                <li><i class="fas fa-check-circle"></i> Enhances lymphatic drainage</li>
-                <li><i class="fas fa-check-circle"></i> Reduces stress and anxiety</li>
-              </ul>
-              </div>
-          </div>
-        </div>
+  <div class="service-card animate__animated" data-animation="fadeInUp" data-delay="0.1s">
+    <div class="card-inner">
+      <div class="card-front">
+        <div class="service-icon"><img src="assets/massage-icon.png" alt="Abhyanga" /></div>
+        <h3 class="service-title">Abhyanga</h3>
+        <p class="service-subtitle">Therapeutic Oil Massage</p>
+        <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
       </div>
+      <div class="card-back">
+        <div class="card-back-content">
+          <h3 class="service-title">Abhyanga</h3>
+          <p class="service-description">A synchronized warm herbal oil massage that nourishes tissues, improves circulation, and promotes deep relaxation, followed by a gentle herbal steam (Swedana).</p>
+          <ul class="service-highlights">
+            <li><i class="fas fa-check-circle"></i> Uses dosha-specific oils</li>
+            <li><i class="fas fa-check-circle"></i> Enhances lymphatic drainage</li>
+            <li><i class="fas fa-check-circle"></i> Reduces stress and anxiety</li>
+            <!-- <li><i class="fas fa-check-circle"></i>// Relieves body ache and pain</li> -->
+          </ul>
+          </div>
+      </div>
+    </div>
+  </div>
 
-      <div class="service-card animate__animated" data-animation="fadeInUp" data-delay="0.2s">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="service-icon"><img src="assets/shirodhara-icon.svg" alt="Shirodhara" /></div>
-            <h3 class="service-title">Shirodhara</h3>
-            <p class="service-subtitle">Mind Relaxation Therapy</p>
-            <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
-          </div>
-          <div class="card-back">
-            <div class="card-back-content">
-              <h3 class="service-title">Shirodhara</h3>
-              <p class="service-description">A continuous flow of warm medicated oil on the forehead that calms the central nervous system and induces deep meditative states.</p>
-              <ul class="service-highlights">
-                <li><i class="fas fa-check-circle"></i> Combats hairloss & insomnia</li>
-                <li><i class="fas fa-check-circle"></i> Reduces stress & anxiety</li>
-                <li><i class="fas fa-check-circle"></i> Improves mental clarity</li>
-              </ul>
-              <button class="btn btn-outline learn-more" data-service="shirodhara">Explore Treatments</button>
-            </div>
-          </div>
+  <div class="service-card animate__animated" data-animation="fadeInUp" data-delay="0.2s">
+    <div class="card-inner">
+      <div class="card-front">
+        <div class="service-icon"><img src="assets/stream-icon.png" alt="Shirodhara" /></div>
+        <h3 class="service-title">Shirodhara</h3>
+        <p class="service-subtitle">Mind Relaxation Therapy</p>
+        <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+      </div>
+      <div class="card-back">
+        <div class="card-back-content">
+          <h3 class="service-title">Shirodhara</h3>
+          <p class="service-description">A continuous flow of warm medicated oil on the forehead that calms the central nervous system and induces deep meditative states.</p>
+          <ul class="service-highlights">
+            <li><i class="fas fa-check-circle"></i> Combats hairloss & insomnia</li>
+            <li><i class="fas fa-check-circle"></i> Reduces stress & anxiety</li>
+            <li><i class="fas fa-check-circle"></i> Improves mental clarity</li>
+          </ul>
+          <button class="btn btn-outline learn-more" data-service="shirodhara">Explore Treatments</button>
         </div>
       </div>
-        
-      <div class="service-card animate__animated" data-animation="fadeInUp" data-delay="0.3s">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="service-icon"><img src="assets/agni-karma-icon.svg" alt="Agni Karma" /></div>
-            <h3 class="service-title">Agni Karma</h3>
-            <p class="service-subtitle">Heat Therapy</p>
-            <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
-          </div>
-          <div class="card-back">
-            <div class="card-back-content">
-              <h3 class="service-title">Agni Karma</h3>
-              <p class="service-description">Precise application of therapeutic heat to specific points for instant pain relief, inflammation reduction, and tissue regeneration.</p>
-              <ul class="service-highlights">
-                <li><i class="fas fa-check-circle"></i> Effective for joint pain</li>
-                <li><i class="fas fa-check-circle"></i> Stimulates healing response</li>
-                <li><i class="fas fa-check-circle"></i> Minimally invasive</li>
-              </ul>
-              </div>
-          </div>
+    </div>
+  </div>
+    
+  <div class="service-card animate__animated" data-animation="fadeInUp" data-delay="0.3s">
+    <div class="card-inner">
+      <div class="card-front">
+        <div class="service-icon"><img src="assets/agni-karma-icon.svg" alt="Agni Karma" /></div>
+        <h3 class="service-title">Agni Karma</h3>
+        <p class="service-subtitle">Heat Therapy</p>
+        <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+      </div>
+      <div class="card-back">
+        <div class="card-back-content">
+          <h3 class="service-title">Agni Karma</h3>
+          <p class="service-description">Precise application of therapeutic heat to specific points for instant pain relief, inflammation reduction, and tissue regeneration.</p>
+          <ul class="service-highlights">
+            <li><i class="fas fa-check-circle"></i> Instant pain relief</li>
+            <li><i class="fas fa-check-circle"></i> Stimulates healing response</li>
+            <li><i class="fas fa-check-circle"></i> Minimally invasive</li>
+          </ul>
+          <!-- ADD THIS BUTTON -->
+          <button class="btn btn-outline learn-more" data-service="agni-karma">Explore Treatments</button>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="service-card animate__animated" data-animation="fadeInUp">
-        <div class="card-inner">
-            <div class="card-front">
-                <div class="service-icon"><img src="assets/patrapottali-icon.svg" alt="Patrapottali"></div>
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="service-icon"><img src="assets/potali-icon.png" alt="Patrapottali"></div>
+            <h3 class="service-title">Patrapottali</h3>
+            <p class="service-subtitle">Medicated Leaf Bundle Massage</p>
+            <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+        </div>
+        <div class="card-back">
+            <div class="card-back-content">
                 <h3 class="service-title">Patrapottali</h3>
-                <p class="service-subtitle">Medicated Leaf Bundle Massage</p>
-                <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
-            </div>
-            <div class="card-back">
-                <div class="card-back-content">
-                    <h3 class="service-title">Patrapottali</h3>
-                    <p class="service-description">Includes local massage and steam, followed by hot fomentation with a bundle (potali) of medicinal leaves to relieve pain and inflammation.</p>
-                    <ul class="service-highlights">
-                        <li><i class="fas fa-check-circle"></i> Reduces joint stiffness</li>
-                        <li><i class="fas fa-check-circle"></i> Effective for arthritis</li>
-                        <li><i class="fas fa-check-circle"></i> Improves circulation</li>
-                    </ul>
-                </div>
+                <p class="service-description">Includes local massage and steam, followed by hot fomentation with a bundle (potali) of medicinal leaves to relieve pain and inflammation.</p>
+                <ul class="service-highlights">
+                    <li><i class="fas fa-check-circle"></i> Reduces joint stiffness</li>
+                    <li><i class="fas fa-check-circle"></i> Effective for arthritis</li>
+                    <li><i class="fas fa-check-circle"></i> Improves circulation</li>
+                </ul>
             </div>
         </div>
-      </div>
+    </div>
+  </div>
 
-      <div class="service-card animate__animated" data-animation="fadeInUp">
-          <div class="card-inner">
-              <div class="card-front">
-                  <div class="service-icon"><img src="assets/pind-swed-icon.svg" alt="Pind Swed"></div>
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+      <div class="card-inner">
+          <div class="card-front">
+              <div class="service-icon"><img src="assets/potali-icon.png" alt="Pind Swed"></div>
+              <h3 class="service-title">Pind Swed</h3>
+              <p class="service-subtitle">Medicated Rice Bundle Massage</p>
+              <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+          </div>
+          <div class="card-back">
+              <div class="card-back-content">
                   <h3 class="service-title">Pind Swed</h3>
-                  <p class="service-subtitle">Medicated Rice Bundle Massage</p>
-                  <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
-              </div>
-              <div class="card-back">
-                  <div class="card-back-content">
-                      <h3 class="service-title">Pind Swed</h3>
-                      <p class="service-description">Involves local massage and steam, followed by hot fomentation with a potali made from medicated rice. It nourishes tissues and reduces pain.</p>
-                      <ul class="service-highlights">
-                          <li><i class="fas fa-check-circle"></i> Strengthens muscles</li>
-                          <li><i class="fas fa-check-circle"></i> Soothes nerve disorders</li>
-                          <li><i class="fas fa-check-circle"></i> Rejuvenates the body</li>
-                      </ul>
-                  </div>
+                  <p class="service-description">Involves local massage and steam, followed by hot fomentation with a potali made from medicated rice. It nourishes tissues and reduces pain.</p>
+                  <ul class="service-highlights">
+                      <li><i class="fas fa-check-circle"></i> Strengthens muscles</li>
+                      <li><i class="fas fa-check-circle"></i> Soothes nerve disorders</li>
+                      <li><i class="fas fa-check-circle"></i> Rejuvenates the body</li>
+                  </ul>
               </div>
           </div>
       </div>
+  </div>
 
-      <div class="service-card animate__animated" data-animation="fadeInUp">
-          <div class="card-inner">
-              <div class="card-front">
-                  <div class="service-icon"><img src="assets/lep-chikitsa-icon.svg" alt="Lep Chikitsa"></div>
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+      <div class="card-inner">
+          <div class="card-front">
+              <div class="service-icon"><img src="assets/lep-chikitsa-icon.png" alt="Lep Chikitsa"></div>
+              <h3 class="service-title">Lep Chikitsa</h3>
+              <p class="service-subtitle">Herbal Paste Application</p>
+              <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+          </div>
+          <div class="card-back">
+              <div class="card-back-content">
                   <h3 class="service-title">Lep Chikitsa</h3>
-                  <p class="service-subtitle">Herbal Paste Application</p>
-                  <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
-              </div>
-              <div class="card-back">
-                  <div class="card-back-content">
-                      <h3 class="service-title">Lep Chikitsa</h3>
-                      <p class="service-description">Combines local massage and steam with the application of a thick herbal paste (lep) patch for targeted pain relief and healing.</p>
-                      <ul class="service-highlights">
-                          <li><i class="fas fa-check-circle"></i> Reduces swelling & pain</li>
-                          <li><i class="fas fa-check-circle"></i> Anti-inflammatory action</li>
-                          <li><i class="fas fa-check-circle"></i> Treats skin conditions</li>
-                      </ul>
-                  </div>
+                  <p class="service-description">Combines local massage and steam with the application of a thick herbal paste (lep) patch for targeted pain relief and healing.</p>
+                  <ul class="service-highlights">
+                      <li><i class="fas fa-check-circle"></i> Reduces swelling & pain</li>
+                      <li><i class="fas fa-check-circle"></i> Anti-inflammatory action</li>
+                      <li><i class="fas fa-check-circle"></i> Treats skin conditions</li>
+                  </ul>
               </div>
           </div>
       </div>
+  </div>
 
-      <div class="service-card animate__animated" data-animation="fadeInUp">
-          <div class="card-inner">
-              <div class="card-front">
-                  <div class="service-icon"><img src="assets/leech-therapy-icon.svg" alt="Jalaukavacharan"></div>
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+      <div class="card-inner">
+          <div class="card-front">
+              <div class="service-icon"><img src="assets/leech-therapy-icon.png" alt="Jalaukavacharan"></div>
+              <h3 class="service-title">Jalaukavacharan</h3>
+              <p class="service-subtitle">Leech Therapy</p>
+              <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+          </div>
+          <div class="card-back">
+              <div class="card-back-content">
                   <h3 class="service-title">Jalaukavacharan</h3>
-                  <p class="service-subtitle">Leech Therapy</p>
-                  <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
-              </div>
-              <div class="card-back">
-                  <div class="card-back-content">
-                      <h3 class="service-title">Jalaukavacharan</h3>
-                      <p class="service-description">A traditional bloodletting (Rakta Mokshan) technique using medicinal leeches to purify blood and treat chronic skin diseases and varicose veins.</p>
-                      <ul class="service-highlights">
-                          <li><i class="fas fa-check-circle"></i> Effective for eczema/psoriasis</li>
-                          <li><i class="fas fa-check-circle"></i> Improves blood flow</li>
-                          <li><i class="fas fa-check-circle"></i> Removes impure blood</li>
-                      </ul>
-                  </div>
+                  <p class="service-description">A traditional bloodletting (Rakta Mokshan) technique using medicinal leeches to purify blood and treat chronic skin diseases and varicose veins.</p>
+                  <ul class="service-highlights">
+                      <li><i class="fas fa-check-circle"></i> Effective for eczema/psoriasis</li>
+                      <li><i class="fas fa-check-circle"></i> Improves blood flow</li>
+                      <li><i class="fas fa-check-circle"></i> Removes impure blood</li>
+                  </ul>
               </div>
           </div>
       </div>
+  </div>
+
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="service-icon"><img src="assets/stream-icon.png" alt="Takradhara"></div>
+            <h3 class="service-title">Takradhara</h3>
+            <p class="service-subtitle">Medicated Buttermilk Therapy</p>
+            <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+        </div>
+        <div class="card-back">
+            <div class="card-back-content">
+                <h3 class="service-title">Takradhara</h3>
+                <p class="service-description">A soothing therapy where medicated buttermilk is poured continuously over the forehead, calming the mind and nervous system.</p>
+                <ul class="service-highlights">
+                    <li><i class="fas fa-check-circle"></i> Relieves anxiety & stress</li>
+                    <li><i class="fas fa-check-circle"></i> Effective for psoriasis</li>
+                    <li><i class="fas fa-check-circle"></i> Promotes restful sleep</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+      <div class="card-inner">
+          <div class="card-front">
+              <div class="service-icon"><img src="assets/sthanik-basti-icon.svg" alt="Sthanik Basti"></div>
+              <h3 class="service-title">Sthanik Basti</h3>
+              <p class="service-subtitle">Localized Oil Treatment</p>
+              <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+          </div>
+          <div class="card-back">
+              <div class="card-back-content">
+                  <h3 class="service-title">Sthanik Basti</h3>
+                  <p class="service-description">A treatment where a reservoir made of dough is placed on a specific body part and filled with warm medicated oil to relieve pain and stiffness.</p>
+                  <ul class="service-highlights">
+                      <li><i class="fas fa-check-circle"></i> Treats back, neck & knee pain</li>
+                      <li><i class="fas fa-check-circle"></i> Nourishes joints & muscles</li>
+                      <li><i class="fas fa-check-circle"></i> Improves flexibility</li>
+                  </ul>
+              </div>
+          </div>
       </div>
+  </div>
+
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="service-icon"><img src="assets/potali-icon.png" alt="Choorna Potali"></div>
+            <h3 class="service-title">Choorna Potali</h3>
+            <p class="service-subtitle">Medicated Powder Bolus Massage</p>
+            <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+        </div>
+        <div class="card-back">
+            <div class="card-back-content">
+                <h3 class="service-title">Choorna Potali</h3>
+                <p class="service-description">A therapy using a bolus (potali) filled with heated herbal powders, applied to the body to alleviate pain, inflammation, and stiffness.</p>
+                <ul class="service-highlights">
+                    <li><i class="fas fa-check-circle"></i> Reduces swelling & pain</li>
+                    <li><i class="fas fa-check-circle"></i> Effective for Arthritis</li>
+                    <li><i class="fas fa-check-circle"></i> Improves circulation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+      <div class="card-inner">
+          <div class="card-front">
+              <div class="service-icon"><img src="assets/kshar-sutra-icon.svg" alt="Kshar Sutra"></div>
+              <h3 class="service-title">Kshar Sutra</h3>
+              <p class="service-subtitle">Medicated Thread Therapy</p>
+              <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+          </div>
+          <div class="card-back">
+              <div class="card-back-content">
+                  <h3 class="service-title">Kshar Sutra</h3>
+                  <p class="service-description">An Ayurvedic parasurgical technique for treating anorectal disorders like piles and fistula-in-ano using a specially prepared medicated thread.</p>
+                  <ul class="service-highlights">
+                      <li><i class="fas fa-check-circle"></i> Minimally invasive procedure</li>
+                      <li><i class="fas fa-check-circle"></i> High success rate</li>
+                      <li><i class="fas fa-check-circle"></i> Low recurrence chance</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+      <div class="card-inner">
+          <div class="card-front">
+              <div class="service-icon"><img src="assets/akshitarpan-icon.png" alt="Akshitarpan"></div>
+              <h3 class="service-title">Akshitarpan</h3>
+              <p class="service-subtitle">Rejuvenating Eye Care</p>
+              <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+          </div>
+          <div class="card-back">
+              <div class="card-back-content">
+                  <h3 class="service-title">Akshitarpan</h3>
+                  <p class="service-description">A procedure where a dough ring is placed around the eyes and filled with lukewarm medicated ghee to nourish and strengthen the eyes.</p>
+                  <ul class="service-highlights">
+                      <li><i class="fas fa-check-circle"></i> Relieves eye strain</li>
+                      <li><i class="fas fa-check-circle"></i> Improves vision clarity</li>
+                      <li><i class="fas fa-check-circle"></i> Reduces dark circles</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="service-card animate__animated" data-animation="fadeInUp">
+      <div class="card-inner">
+          <div class="card-front">
+              <div class="service-icon"><img src="assets/yogopchar-icon.png" alt="Yogopchar"></div>
+              <h3 class="service-title">Yogopchar</h3>
+              <p class="service-subtitle">Personalized Yoga Therapy</p>
+              <div class="interaction-cue"><i class="fas fa-sync-alt"></i><span>Click for details</span></div>
+          </div>
+          <div class="card-back">
+              <div class="card-back-content">
+                  <h3 class="service-title">Yogopchar</h3>
+                  <p class="service-description">Tailored yoga sessions combining asanas, pranayama, and meditation to address specific health conditions and promote overall well-being.</p>
+                  <ul class="service-highlights">
+                      <li><i class="fas fa-check-circle"></i> Complements Ayurvedic treatment</li>
+                      <li><i class="fas fa-check-circle"></i> Enhances mind-body connection</li>
+                      <li><i class="fas fa-check-circle"></i> Improves strength & flexibility</li>
+                  </ul>
+                  <button class="btn btn-outline learn-more" data-service="yogopchar">Explore Treatments</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </div>
     <div class="services-cta animate__animated" data-animation="fadeInUp">
       <p>
         Don't see what you're looking for? We offer many more specialized
@@ -433,159 +575,105 @@
 
     <!-- Service Modals -->
     <div id="service-modal" class="modal">
-      <div class="modal-overlay"></div>
-      <div class="modal-container">
-        <div class="modal-content">
-          <button class="close-modal">
-            <i class="fas fa-times"></i>
-          </button>
-          <div class="modal-header">
-            <h2 id="modal-title">Panchakarma</h2>
-            <div class="modal-subtitle">Complete Detoxification Therapy</div>
-          </div>
-          <div class="modal-body">
-            <div class="modal-image">
-              <img
-                src="assets/panchakarma-modal.jpg"
-                alt="Panchakarma Therapy"
-                id="modal-image"
-              />
+  <div class="modal-overlay"></div>
+  <div class="modal-container">
+    <div class="modal-content">
+      
+      <button class="close-modal"><i class="fas fa-times"></i></button>
+
+      <div class="modal-header">
+        <h2 id="modal-title">Service Details</h2>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modal-image" src="" alt="Service Image">
+        </div>
+        <div class="modal-info">
+          <div id="panchakarma-details" class="service-details" style="display: none;">
+            <h3>The Panchakarma Experience</h3>
+            <p>Our signature 3-phase detoxification program is customized to your unique constitution and health needs:</p>
+            <div class="phase">
+              <h4><i class="fas fa-leaf"></i> Preparation Phase (Purvakarma)</h4>
+              <p>Your body is prepared for deep cleansing through oleation (Snehana) and fomentation (Swedana) therapies.</p>
             </div>
-            <div class="modal-info">
-              <div id="modal-content">
-                <div id="panchakarma-details" class="service-details">
-                  <h3>The Panchakarma Experience</h3>
-                  <p>
-                    Our signature 3-phase detoxification program is customized
-                    to your unique constitution and health needs:
-                  </p>
-
-                  <div class="phase">
-                    <h4>
-                      <i class="fas fa-leaf"></i> Preparation Phase (Purvakarma)
-                    </h4>
-                    <p>
-                      Your body is prepared for deep cleansing through oleation
-                      (Snehana) and fomentation (Swedana) therapies.
-                    </p>
-                  </div>
-
-                  <div class="phase">
-                    <h4>
-                      <i class="fas fa-spa"></i> Main Procedures (Pradhanakarma)
-                    </h4>
-                    <p>
-                      The five cleansing actions are administered based on your
-                      needs:
-                    </p>
-                    <div class="treatment-grid">
-                      <div class="treatment-card">
-                        <div class="treatment-icon">
-                          <i class="fas fa-lungs"></i>
-                        </div>
-                        <h5>Vamana</h5>
-                        <p>Therapeutic emesis to cleanse Kapha</p>
-                      </div>
-                      <div class="treatment-card">
-                        <div class="treatment-icon">
-                          <i class="fas fa-seedling"></i>
-                        </div>
-                        <h5>Virechana</h5>
-                        <p>Purgation therapy for Pitta balance</p>
-                      </div>
-                      <div class="treatment-card">
-                        <div class="treatment-icon">
-                          <i class="fas fa-prescription-bottle"></i>
-                        </div>
-                        <h5>Basti</h5>
-                        <p>Medicated enema for Vata disorders</p>
-                      </div>
-                      <div class="treatment-card">
-                        <div class="treatment-icon">
-                          <i class="fas fa-head-side-virus"></i>
-                        </div>
-                        <h5>Nasya</h5>
-                        <p>Nasal administration for head region</p>
-                      </div>
-                      <div class="treatment-card">
-                        <div class="treatment-icon">
-                          <i class="fas fa-tint"></i>
-                        </div>
-                        <h5>Raktamokshana</h5>
-                        <p>Blood purification therapy</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="phase">
-                    <h4>
-                      <i class="fas fa-heart"></i> Rejuvenation Phase
-                      (Paschatkarma)
-                    </h4>
-                    <p>
-                      Specialized diet, herbs, and lifestyle practices to
-                      rebuild your system stronger than before.
-                    </p>
-                  </div>
-
-                  <div class="benefits-section">
-                    <h3>Benefits of Panchakarma</h3>
-                    <div class="benefits-grid">
-                      <div class="benefit-card">
-                        <div class="benefit-icon">
-                          <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <p>Deep cellular detoxification</p>
-                      </div>
-                      <div class="benefit-card">
-                        <div class="benefit-icon">
-                          <i class="fas fa-brain"></i>
-                        </div>
-                        <p>Enhanced mental clarity</p>
-                      </div>
-                      <div class="benefit-card">
-                        <div class="benefit-icon">
-                          <i class="fas fa-bed"></i>
-                        </div>
-                        <p>Improved sleep quality</p>
-                      </div>
-                      <div class="benefit-card">
-                        <div class="benefit-icon">
-                          <i class="fas fa-fire"></i>
-                        </div>
-                        <p>Restored digestive fire</p>
-                      </div>
-                      <div class="benefit-card">
-                        <div class="benefit-icon">
-                          <i class="fas fa-shield-virus"></i>
-                        </div>
-                        <p>Strengthened immunity</p>
-                      </div>
-                      <div class="benefit-card">
-                        <div class="benefit-icon">
-                          <i class="fas fa-smile"></i>
-                        </div>
-                        <p>Emotional balance</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  id="abhyanga-details"
-                  class="service-details"
-                  style="display: none"
-                  <!-- Similar detailed structure for Abhyanga -->
-                </div>
+            <div class="phase">
+              <h4><i class="fas fa-spa"></i> Main Procedures (Pradhanakarma)</h4>
+              <p>The five cleansing actions are administered based on your needs: Vamana, Virechana, Basti, Nasya, and Raktamokshana.</p>
+            </div>
+            <div class="phase">
+              <h4><i class="fas fa-heart"></i> Rejuvenation Phase (Paschatkarma)</h4>
+              <p>Specialized diet, herbs, and lifestyle practices to rebuild your system stronger than before.</p>
+            </div>
+            <div class="benefits-section">
+              <h3>Benefits of Panchakarma</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-heartbeat"></i></div><p>Deep detoxification</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-brain"></i></div><p>Enhanced mental clarity</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-shield-virus"></i></div><p>Strengthened immunity</p></div>
               </div>
             </div>
           </div>
-        <div class="modal-footer">
-            <a href="#contact" class="btn btn-primary modal-book-button">Book This Treatment</a>
-        </div>
+
+          <div id="shirodhara-details" class="service-details" style="display: none;">
+            <h3>The Shirodhara Experience</h3>
+            <p>A deeply calming therapy that brings balance to the mind and nervous system through a continuous, gentle stream of warm medicated oil on the forehead.</p>
+            <div class="phase">
+              <h4><i class="fas fa-bed"></i> Ultimate Relaxation</h4>
+              <p>Shirodhara is renowned for its ability to induce a state of profound relaxation, similar to meditation. It pacifies the Vata dosha, which governs the nervous system.</p>
+            </div>
+            <div class="benefits-section">
+              <h3>Benefits of Shirodhara</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-moon"></i></div><p>Combats Insomnia</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-smile-beam"></i></div><p>Reduces Stress & Anxiety</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-lightbulb"></i></div><p>Improves Mental Focus</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="agni-karma-details" class="service-details" style="display: none;">
+            <h3>The Agni Karma Procedure</h3>
+            <p>An ancient Ayurvedic technique for instant pain relief by applying therapeutic heat using a specialized metallic instrument (Shalaka).</p>
+            <div class="phase">
+              <h4><i class="fas fa-fire"></i> Targeted Heat Application</h4>
+              <p>The procedure involves heating the Shalaka and applying it precisely to the painful area for a few seconds. It is highly effective for musculoskeletal pain.</p>
+            </div>
+            <div class="benefits-section">
+              <h3>Benefits of Agni Karma</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-bolt"></i></div><p>Instant Pain Relief</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-running"></i></div><p>Treats Joint & Muscle Pain</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-shoe-prints"></i></div><p>Effective for Heel Pain</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="yogopchar-details" class="service-details" style="display: none;">
+            <h3>The Yogopchar Journey</h3>
+            <p>A holistic approach that integrates the sister sciences of Ayurveda and Yoga. Our practitioners design personalized yoga protocols to complement your treatment plan.</p>
+            <div class="phase">
+              <h4><i class="fas fa-child"></i> Asana, Pranayama & Dhyana</h4>
+              <p>We combine physical postures (Asana), breathing techniques (Pranayama), and meditation (Dhyana) to accelerate healing and restore mind-body balance.</p>
+            </div>
+            <div class="benefits-section">
+              <h3>Benefits of Yogopchar</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-spa"></i></div><p>Reduces Stress</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-universal-access"></i></div><p>Improves Flexibility</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-user-check"></i></div><p>Supports Disease Management</p></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+      <div class="modal-footer">
+        <a href="#contact" class="btn btn-primary modal-book-button">Book This Treatment</a>
+      </div>
     </div>
+  </div>
+</div>
 
     <!-- Products Section -->
 <section id="products" class="products">
@@ -609,7 +697,7 @@
     <div class="products-container">
       <div class="product-card animate__animated" data-animation="fadeInUp">
         <div class="product-img-container">
-          <div class="product-img"><img src="assets/varnya-lep.jpg" alt="Varnya Lep"></div>
+          <div class="product-img"><img src="assets/varnya-lep.png" alt="Varnya Lep"></div>
         </div>
         <div class="product-info">
           <h3 class="product-title">Varnya Lep</h3>
@@ -630,7 +718,7 @@
 
       <div class="product-card animate__animated" data-animation="fadeInUp" data-delay="0.1s">
         <div class="product-img-container">
-          <div class="product-img"><img src="assets/ubtan.jpg" alt="Ubtan Body Scrub"></div>
+          <div class="product-img"><img src="assets/ubtan.png" alt="Ubtan Body Scrub"></div>
         </div>
         <div class="product-info">
           <h3 class="product-title">Ubtan / Body Scrub</h3>
@@ -651,7 +739,7 @@
 
       <div class="product-card animate__animated" data-animation="fadeInUp" data-delay="0.2s">
         <div class="product-img-container">
-          <div class="product-img"><img src="assets/dandruff-pack.jpg" alt="Dandruff Pack"></div>
+          <div class="product-img"><img src="assets/dandruff-pack.png" alt="Dandruff Pack"></div>
         </div>
         <div class="product-info">
           <h3 class="product-title">Dandruff Pack</h3>
@@ -672,7 +760,7 @@
 
       <div class="product-card animate__animated" data-animation="fadeInUp">
         <div class="product-img-container">
-          <div class="product-img"><img src="assets/hair-growth-pack.jpg" alt="Hair Growth Pack"></div>
+          <div class="product-img"><img src="assets/hair-growth-pack.png" alt="Hair Growth Pack"></div>
         </div>
         <div class="product-info">
           <h3 class="product-title">Hair Growth Pack</h3>
@@ -693,7 +781,7 @@
 
       <div class="product-card animate__animated" data-animation="fadeInUp">
         <div class="product-img-container">
-          <div class="product-img"><img src="assets/acne-pack.jpg" alt="Acne Packs"></div>
+          <div class="product-img"><img src="assets/acne-pack.png" alt="Acne filled face"></div>
         </div>
         <div class="product-info">
           <h3 class="product-title">Acne Packs</h3>
@@ -714,7 +802,7 @@
 
       <div class="product-card animate__animated" data-animation="fadeInUp">
         <div class="product-img-container">
-          <div class="product-img"><img src="assets/eye-pack.jpg" alt="Eye Contour Pack"></div>
+          <div class="product-img"><img src="assets/eye-pack.png" alt="Eye Contour Pack"></div>
         </div>
         <div class="product-info">
           <h3 class="product-title">Eye Contour Pack</h3>
@@ -765,7 +853,7 @@
             </div>
             <div class="tip-card-body">
               <div class="tip-main">
-                <div class="tip-image"><img src="assets/diabetes-management.jpg" alt="Diabetes Management"></div>
+                <div class="tip-image"><img src="assets/diabetes-management.png" alt="Diabetes Management"></div>
                 <div class="tip-content">
                   <h4>Key Recommendations</h4>
                   <ul class="tip-list">
@@ -788,7 +876,7 @@
                 </div>
                 <div class="tip-card-body">
                   <div class="tip-main">
-                    <div class="tip-image"><img src="assets/pcos-management.jpg" alt="PCOS Management"></div>
+                    <div class="tip-image"><img src="assets/pcos-management.png" alt="PCOS Management"></div>
                     <div class="tip-content">
                       <h4>Key Recommendations</h4>
                       <ul class="tip-list">
@@ -811,7 +899,7 @@
                 </div>
                 <div class="tip-card-body">
                   <div class="tip-main">
-                    <div class="tip-image"><img src="assets/obesity-management.jpg" alt="Weight Management"></div>
+                    <div class="tip-image"><img src="assets/obesity-management.png" alt="Weight Management"></div>
                     <div class="tip-content">
                       <h4>Key Recommendations</h4>
                       <ul class="tip-list">
@@ -834,7 +922,7 @@
                 </div>
                 <div class="tip-card-body">
                   <div class="tip-main">
-                    <div class="tip-image"><img src="assets/flu-management.jpg" alt="Immunity Boost for Flu"></div>
+                    <div class="tip-image"><img src="assets/flu-management.png" alt="Immunity Boost for Flu"></div>
                     <div class="tip-content">
                       <h4>Key Recommendations</h4>
                       <ul class="tip-list">

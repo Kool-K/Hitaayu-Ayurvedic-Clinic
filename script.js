@@ -124,25 +124,35 @@ document.addEventListener('DOMContentLoaded', function () {
             const service = this.getAttribute('data-service');
 
             // Set modal content based on service
+            // Hide all detail sections first
+            document.querySelectorAll('.service-details').forEach(div => div.style.display = 'none');
+
+            // Set modal content based on the clicked service
             switch (service) {
                 case 'panchakarma':
                     modalTitle.textContent = 'Panchakarma';
                     modalImage.src = 'assets/panchakarma-modal.jpg';
-                    break;
-                case 'abhyanga':
-                    modalTitle.textContent = 'Abhyanga';
-                    modalImage.src = 'assets/abhyanga-modal.jpg';
+                    document.getElementById('panchakarma-details').style.display = 'block';
                     break;
                 case 'shirodhara':
                     modalTitle.textContent = 'Shirodhara';
                     modalImage.src = 'assets/shirodhara-modal.jpg';
+                    document.getElementById('shirodhara-details').style.display = 'block';
                     break;
                 case 'agni-karma':
                     modalTitle.textContent = 'Agni Karma';
                     modalImage.src = 'assets/agni-karma-modal.jpg';
+                    document.getElementById('agni-karma-details').style.display = 'block';
+                    break;
+                case 'yogopchar':
+                    modalTitle.textContent = 'Yogopchar';
+                    modalImage.src = 'assets/yogopchar-modal.jpg';
+                    document.getElementById('yogopchar-details').style.display = 'block';
                     break;
                 default:
+                    // Fallback in case something unexpected is clicked
                     modalTitle.textContent = 'Service Details';
+                    document.getElementById('panchakarma-details').style.display = 'block';
             }
 
             // Show modal
