@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     mobileMenuBtn.addEventListener('click', function () {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
         this.classList.toggle('active');
         navList.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
@@ -184,6 +186,38 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.add('no-scroll');
         });
     });
+
+
+    // When we need to add more services, just add more cases in the switch statement above or there's a better/easier version
+
+    //     const serviceData = {
+    //   'panchakarma': { title: 'Panchakarma', image: 'assets/panchakarma-modal.png' },
+    //   'abhyanga': { title: 'Abhyanga', image: 'assets/abhyanga-modal.png' },
+    //   'shirodhara': { title: 'Shirodhara', image: 'assets/shirodhara-modal.png' },
+    //   // ...add all other services here
+    //   'yogopchar': { title: 'Yogopchar', image: 'assets/yogopchar-modal.png' }
+    // }; 
+
+
+    // click listener
+    // learnMoreBtns.forEach(btn => {
+    //     btn.addEventListener('click', function () {
+    //         const serviceId = this.getAttribute('data-service');
+    //         const data = serviceData[serviceId];
+
+    //         if (data) {
+    //             modalTitle.textContent = data.title;
+    //             modalImage.src = data.image;
+
+    //             document.querySelectorAll('.service-details').forEach(div => div.style.display = 'none');
+    //             document.getElementById(`${serviceId}-details`).style.display = 'block';
+
+    //             modal.style.display = 'block';
+    //             document.body.classList.add('no-scroll');
+    //         }
+    //     });
+    // });
+
 
     // Close modal
     function closeModalFunc() {

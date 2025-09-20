@@ -2247,6 +2247,18 @@ ul {
     left: 50%;
     transform: translateX(-50%);
   }
+
+
+  /* disable video on smaller devices like phones */
+  .hero-video video {
+        display: none; /* Hides the video element */
+    }
+    .hero-video {
+         /* Ensures the poster image is visible */
+        background-image: url('../assets/hero-fallback2.png');
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 /* --- Small Mobile Phones (Up to 480px) --- */
