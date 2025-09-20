@@ -131,26 +131,50 @@ document.addEventListener('DOMContentLoaded', function () {
             switch (service) {
                 case 'panchakarma':
                     modalTitle.textContent = 'Panchakarma';
-                    modalImage.src = 'assets/panchakarma-modal.jpg';
+                    modalImage.src = 'assets/panchakarma-modal.png';
                     document.getElementById('panchakarma-details').style.display = 'block';
+                    break;
+                case 'abhyanga':
+                    modalTitle.textContent = 'Abhyanga';
+                    modalImage.src = 'assets/abhyanga-modal.png'; // Make sure you have this image
+                    document.getElementById('abhyanga-details').style.display = 'block';
                     break;
                 case 'shirodhara':
                     modalTitle.textContent = 'Shirodhara';
-                    modalImage.src = 'assets/shirodhara-modal.jpg';
+                    modalImage.src = 'assets/shirodhara-modal.png';
                     document.getElementById('shirodhara-details').style.display = 'block';
                     break;
                 case 'agni-karma':
                     modalTitle.textContent = 'Agni Karma';
-                    modalImage.src = 'assets/agni-karma-modal.jpg';
+                    modalImage.src = 'assets/agni-karma-modal.png';
                     document.getElementById('agni-karma-details').style.display = 'block';
+                    break;
+                case 'sthanik-basti':
+                    modalTitle.textContent = 'Sthanik Basti';
+                    modalImage.src = 'assets/sthanik-basti-modal.jpg';
+                    document.getElementById('sthanik-basti-details').style.display = 'block';
+                    break;
+                case 'patrapottali':
+                    modalTitle.textContent = 'Patrapottali';
+                    modalImage.src = 'assets/patrapottali-modal.jpg';
+                    document.getElementById('patrapottali-details').style.display = 'block';
+                    break;
+                case 'takradhara':
+                    modalTitle.textContent = 'Takradhara';
+                    modalImage.src = 'assets/takradhara-modal.png'; // Make sure you have this image
+                    document.getElementById('takradhara-details').style.display = 'block';
+                    break;
+                case 'akshitarpan':
+                    modalTitle.textContent = 'Akshitarpan';
+                    modalImage.src = 'assets/akshitarpan-modal.jpg';
+                    document.getElementById('akshitarpan-details').style.display = 'block';
                     break;
                 case 'yogopchar':
                     modalTitle.textContent = 'Yogopchar';
-                    modalImage.src = 'assets/yogopchar-modal.jpg';
+                    modalImage.src = 'assets/yogopchar-modal.png';
                     document.getElementById('yogopchar-details').style.display = 'block';
                     break;
                 default:
-                    // Fallback in case something unexpected is clicked
                     modalTitle.textContent = 'Service Details';
                     document.getElementById('panchakarma-details').style.display = 'block';
             }

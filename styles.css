@@ -8,7 +8,6 @@
    3. Reusable Components (Container, Buttons, Section Headers)
    ========================================================================== */
 
-
 /* ==========================================================================
    1. Root Variables
    ========================================================================== */
@@ -24,7 +23,7 @@
   --green-tint: #e6f5e9;
   --peach-tint: #fdedee;
   --peach-dark: #e57379;
-  
+
   /* Neutral Colors */
   --black: #000000;
   --text-color: #333333;
@@ -42,7 +41,7 @@
   --font-size-h2: 42px;
   --font-size-h3: 28px;
   --font-size-h4: 20px;
-  
+
   /* Spacing */
   --space-xs: 4px;
   --space-sm: 8px;
@@ -70,7 +69,6 @@
   --border-radius-rounded: 50px;
   --border-radius-circle: 50%;
 }
-
 
 /* ==========================================================================
    2. Base & Global Styles
@@ -100,17 +98,30 @@ body.no-scroll {
   overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-secondary);
   font-weight: 600;
   line-height: 1.3;
   color: var(--green);
 }
 
-h1 { font-size: var(--font-size-h1); }
-h2 { font-size: var(--font-size-h2); }
-h3 { font-size: var(--font-size-h3); }
-h4 { font-size: var(--font-size-h4); }
+h1 {
+  font-size: var(--font-size-h1);
+}
+h2 {
+  font-size: var(--font-size-h2);
+}
+h3 {
+  font-size: var(--font-size-h3);
+}
+h4 {
+  font-size: var(--font-size-h4);
+}
 
 a {
   text-decoration: none;
@@ -127,7 +138,6 @@ img {
 ul {
   list-style: none;
 }
-
 
 /* ==========================================================================
    3. Reusable Components
@@ -384,7 +394,6 @@ ul {
   visibility: visible;
 }
 
-
 /* ==========================================================================
    5. Hero Section (REVISED)
    ========================================================================== */
@@ -420,7 +429,8 @@ ul {
 }
 
 .hero-video video,
-.hero-video img { /* Fallback image styles */
+.hero-video img {
+  /* Fallback image styles */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -434,8 +444,9 @@ ul {
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(12, 151, 42, 0.6) 0%, /* Semi-transparent Green */
-    rgba(43, 80, 170, 0.7) 100% /* Semi-transparent Sapphire */
+    rgba(12, 151, 42, 0.6) 0%,
+    /* Semi-transparent Green */ rgba(43, 80, 170, 0.7) 100%
+      /* Semi-transparent Sapphire */
   );
   z-index: 1;
 }
@@ -490,7 +501,7 @@ ul {
 .doctor-tip {
   position: absolute;
   /* MODIFIED: Lowered the tip to sit below the buttons */
-  bottom: 80px; 
+  bottom: 80px;
   left: 0;
   right: 0;
   display: flex;
@@ -730,7 +741,6 @@ ul {
   color: var(--text-color-light);
 }
 
-
 /* Stats Card */
 .clinic-card-stats {
   justify-content: space-around;
@@ -791,7 +801,6 @@ ul {
 .specializations-info p:last-child {
   margin-bottom: 0;
 }
-
 
 /* ==========================================================================
    7. Services Section
@@ -1045,15 +1054,19 @@ ul {
 
 .modal-body {
   display: grid;
-  grid-template-columns: 1fr; /* Default for mobile */
+  grid-template-columns: 1fr; /* Single column for mobile-first */
+  /* ADDED: This creates space on all sides of the content area */
+  padding: var(--space-xl);
 }
 
 .modal-image {
   width: 100%;
-  height: 250px;
+  aspect-ratio: 3 / 2; /* Forces the container to a 3:2 ratio */
   overflow: hidden;
+  border-radius: var(--border-radius-md);
 }
 
+/* ADDED BACK: This rule was missing */
 .modal-image img {
   width: 100%;
   height: 100%;
@@ -1061,7 +1074,7 @@ ul {
 }
 
 .modal-info {
-  padding: var(--space-xl);
+  padding: 0;
 }
 
 .phase {
@@ -1142,7 +1155,6 @@ ul {
   border-bottom-right-radius: var(--border-radius-xl);
 }
 
-
 /* ==========================================================================
    8. Products Section
    ========================================================================== */
@@ -1159,7 +1171,7 @@ ul {
   gap: var(--space-xl);
   position: relative;
   z-index: 1;
-  align-items:start;
+  align-items: start;
 }
 
 .product-card {
@@ -1270,7 +1282,6 @@ ul {
   font-size: var(--font-size-lg);
   color: var(--text-color-light);
 }
-
 
 /* ==========================================================================
    9. Health Tips Section
@@ -1456,7 +1467,6 @@ ul {
 .tip-list li strong {
   margin-right: var(--space-sm);
 }
-
 
 /* ==========================================================================
    10. Daily Routines Section
@@ -1753,7 +1763,6 @@ ul {
   border: 0;
 }
 
-
 /* ==========================================================================
    12. Footer
    ========================================================================== */
@@ -1894,7 +1903,6 @@ ul {
   color: var(--peach);
 }
 
-
 /* ==========================================================================
    13. Utility & Helper Classes
    ========================================================================== */
@@ -1999,31 +2007,56 @@ ul {
   transform: translateY(-5px);
 }
 
-
 /* ==========================================================================
    14. Animations & Keyframes
    ========================================================================== */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-20px); }
-  60% { transform: translateY(-10px); }
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
 @keyframes modalFadeIn {
@@ -2036,7 +2069,6 @@ ul {
     transform: scale(1) translateY(0);
   }
 }
-
 
 /* ==========================================================================
    15. Responsive Media Queries
@@ -2052,22 +2084,29 @@ ul {
   }
 }
 
-/* --- Tablets (Up to 1024px) --- */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .clinic-info-grid {
-    grid-template-columns: 1.5fr 1fr; /* Two columns */
-  }
-  .clinic-card-philosophy {
-    grid-column: 1 / -1; /* Philosophy spans full width */
+    grid-template-columns: 1.5fr 1fr 1fr;
   }
   .clinic-card-tagline {
-    grid-column: 1 / -1; /* Tagline also spans full width */
+    grid-column: auto;
   }
+
+  /* --- MODAL STYLES FOR TEXT WRAP --- */
   .modal-body {
-    grid-template-columns: 40% 1fr; /* Image and text side-by-side */
+    /* Switching back to flex for better control over image/text alignment */
+    display: flex;
+    flex-wrap: wrap; /* Allows text to wrap below the image if needed */
+    justify-content: center; /* This centers the image horizontally */
+    align-items: flex-start; /* Aligns content at the top */
+    gap: var(--space-xl); /* Add spacing between image and text */
   }
+
   .modal-image {
-    height: 100%;
+    width: 40%; /* Image takes 40% of the available width */
+    flex-shrink: 0; /* Prevents image from shrinking */
+    /* REMOVED: float: left; margin-right: var(--space-xl); margin-bottom: var(--space-md); */
+    /* These float properties are no longer needed with flexbox */
   }
 }
 
@@ -2138,17 +2177,31 @@ ul {
   }
 
   /* Hero Section */
-  .hero { min-height: 600px; padding-top: 70px; }
-  .hero-title { font-size: 36px; }
-  .hero-subtitle { font-size: 16px; }
-  .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; }
-  .tip-text { font-size: 14px; }
+  .hero {
+    min-height: 600px;
+    padding-top: 70px;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  .tip-text {
+    font-size: 14px;
+  }
 
   /* About Section */
   .clinic-info-grid {
     grid-template-columns: 1fr; /* Back to single column */
   }
-  .clinic-card-philosophy, .clinic-card-tagline {
+  .clinic-card-philosophy,
+  .clinic-card-tagline {
     grid-column: auto; /* Reset column span */
   }
   .clinic-card-stats {
@@ -2185,7 +2238,9 @@ ul {
   .footer-grid {
     text-align: center;
   }
-  .footer-logo, .footer-social, .footer-contact li {
+  .footer-logo,
+  .footer-social,
+  .footer-contact li {
     justify-content: center;
   }
   .footer-title::after {
@@ -2196,7 +2251,9 @@ ul {
 
 /* --- Small Mobile Phones (Up to 480px) --- */
 @media (max-width: 480px) {
-  html { font-size: 15px; } /* Slightly increase base font for readability */
+  html {
+    font-size: 15px;
+  } /* Slightly increase base font for readability */
 
   .container {
     padding: 0 var(--space-md);
