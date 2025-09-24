@@ -153,12 +153,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     break;
                 case 'sthanik-basti':
                     modalTitle.textContent = 'Sthanik Basti';
-                    modalImage.src = 'assets/sthanik-basti-modal.jpg';
+                    modalImage.src = 'assets/sthanik-basti-modal.png';
                     document.getElementById('sthanik-basti-details').style.display = 'block';
                     break;
                 case 'patrapottali':
                     modalTitle.textContent = 'Patrapottali';
-                    modalImage.src = 'assets/patrapottali-modal.jpg';
+                    modalImage.src = 'assets/patrapottali-modal.png';
                     document.getElementById('patrapottali-details').style.display = 'block';
                     break;
                 case 'takradhara':
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     break;
                 case 'akshitarpan':
                     modalTitle.textContent = 'Akshitarpan';
-                    modalImage.src = 'assets/akshitarpan-modal.jpg';
+                    modalImage.src = 'assets/akshitarpan-modal.png';
                     document.getElementById('akshitarpan-details').style.display = 'block';
                     break;
                 case 'yogopchar':
@@ -294,11 +294,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Rotate Doctor's Tip
+    // const tips = [
+    //     "Today's Wellness Tip: Start your morning with a glass of warm water infused with copper to boost immunity and digestion.",
+    //     "Ayurvedic Wisdom: Eat your largest meal at lunch when your digestive fire (agni) is strongest.",
+    //     "Health Tip: Practice oil pulling with sesame oil for 5-10 minutes daily to promote oral health.",
+    //     "Seasonal Advice: Include warming spices like ginger and black pepper in your diet during colder months.",
+    //     "Mindfulness Tip: Take 5 deep breaths before each meal to activate your parasympathetic nervous system for better digestion."
+    // ];
+    // Find and replace this entire array in script.js
+
     const tips = [
-        "Today's Wellness Tip: Start your morning with a glass of warm water infused with copper to boost immunity and digestion.",
-        "Ayurvedic Wisdom: Eat your largest meal at lunch when your digestive fire (agni) is strongest.",
+        "Ayurvedic Wisdom: Eat your largest meal at lunch (ideally 11 AM - 1 PM) when your digestive fire (agni) is strongest.",
+        "Health Tip: To improve digestion, enjoy a glass of buttermilk at the end of your lunch.",
+        "Mindful Eating: Chew your food properly and avoid distractions like watching TV for better nutrient absorption.",
+        "Stomach Rule: Fill your stomach 1/2 with solids, 1/4 with liquids, and leave 1/4 empty for optimal digestion.",
+        "Pro Tip: Having your evening meal as early as possible is one of the best habits for digestive health.",
+        "Did you know? According to Ayurveda, it's best to eat sweet-tasting foods at the beginning of your meal.",
         "Health Tip: Practice oil pulling with sesame oil for 5-10 minutes daily to promote oral health.",
-        "Seasonal Advice: Include warming spices like ginger and black pepper in your diet during colder months.",
         "Mindfulness Tip: Take 5 deep breaths before each meal to activate your parasympathetic nervous system for better digestion."
     ];
 
@@ -397,5 +409,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         lastTap = currentTime;
     }, false);
+
+    // FAQ Accordion Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const currentlyActive = document.querySelector('.faq-item.active');
+            if (currentlyActive && currentlyActive !== item) {
+                currentlyActive.classList.remove('active');
+            }
+            item.classList.toggle('active');
+        });
+    });
 
 }); // This is the final closing brace of your file
