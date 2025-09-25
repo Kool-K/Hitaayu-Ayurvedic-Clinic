@@ -2432,11 +2432,11 @@ ul {
   .clinic-card-tagline {
     grid-column: auto; /* Reset column span */
   }
-  .clinic-card-stats {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: var(--space-lg); /* Add some padding */
-  }
+.clinic-card-stats {
+  flex-direction: column;   /* THE FIX: Stacks the stats vertically */
+  gap: var(--space-xl);       /* Adds nice spacing between the stacked items */
+  padding: var(--space-xl); 
+}
 
   /* Modal */
   .modal-body {
