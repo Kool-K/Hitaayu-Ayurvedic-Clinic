@@ -303,16 +303,27 @@ document.addEventListener('DOMContentLoaded', function () {
     // ];
     // Find and replace this entire array in script.js
 
+    // const tips = [
+    //     "Ayurvedic Wisdom: Eat your largest meal at lunch (ideally 11 AM - 1 PM) when your digestive fire (agni) is strongest.",
+    //     "Health Tip: To improve digestion, enjoy a glass of buttermilk at the end of your lunch.",
+    //     "Mindful Eating: Chew your food properly and avoid distractions like watching TV for better nutrient absorption.",
+    //     "Stomach Rule: Fill your stomach 1/2 with solids, 1/4 with liquids, and leave 1/4 empty for optimal digestion.",
+    //     "Pro Tip: Having your evening meal as early as possible is one of the best habits for digestive health.",
+    //     "Did you know? According to Ayurveda, it's best to eat sweet-tasting foods at the beginning of your meal.",
+    //     "Health Tip: Practice oil pulling with sesame oil for 5-10 minutes daily to promote oral health.",
+    //     "Mindfulness Tip: Take 5 deep breaths before each meal to activate your parasympathetic nervous system for better digestion."
+    // ];
+
     const tips = [
-        "Ayurvedic Wisdom: Eat your largest meal at lunch (ideally 11 AM - 1 PM) when your digestive fire (agni) is strongest.",
-        "Health Tip: To improve digestion, enjoy a glass of buttermilk at the end of your lunch.",
-        "Mindful Eating: Chew your food properly and avoid distractions like watching TV for better nutrient absorption.",
-        "Stomach Rule: Fill your stomach 1/2 with solids, 1/4 with liquids, and leave 1/4 empty for optimal digestion.",
-        "Pro Tip: Having your evening meal as early as possible is one of the best habits for digestive health.",
-        "Did you know? According to Ayurveda, it's best to eat sweet-tasting foods at the beginning of your meal.",
-        "Health Tip: Practice oil pulling with sesame oil for 5-10 minutes daily to promote oral health.",
-        "Mindfulness Tip: Take 5 deep breaths before each meal to activate your parasympathetic nervous system for better digestion."
-    ];
+    "Eat your largest meal at lunchtime when digestive fire (agni) is strongest.",
+    "For better digestion, enjoy a glass of buttermilk after your lunch.",
+    "Chew your food properly and avoid screen time while eating for better absorption.",
+    "For optimal digestion, fill your stomach 1/2 with solids and 1/4 with liquids.",
+    "An early and light dinner is one of the best habits for digestive health.",
+    "Did you know? Ayurveda recommends eating sweet foods at the start of your meal.",
+    "Practice daily oil pulling with sesame oil to promote excellent oral health.",
+    "Take 5 deep breaths before each meal to prepare your body for digestion."
+];
 
     const tipText = document.querySelector('.tip-text');
     let currentTip = 0;

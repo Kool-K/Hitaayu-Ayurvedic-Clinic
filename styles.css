@@ -2457,6 +2457,15 @@ ul {
   .tip-text {
     font-size: 14px;
   }
+  .doctor-tip {
+    position: relative; /* This is the KEY: Puts the tip in the normal document flow */
+    bottom: auto;       /* Resets the absolute positioning */
+    left: auto;
+    right: auto;
+    width: 100%;        /* Ensures it fits within the container */
+    padding: 0 var(--space-md); /* Adds some side padding */
+    margin-top: 0;      /* Removes any inherited top margin */
+  }
 
   /* About Section */
   .clinic-card {
@@ -2543,7 +2552,7 @@ ul {
     padding: 12px 20px;
     font-size: var(--font-size-sm); /* Makes the button a bit smaller and neater on mobile */
   }
-  
+
 }
 
 /* --- Small Mobile Phones (Up to 480px) --- */
