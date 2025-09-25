@@ -292,8 +292,8 @@ ul {
 }
 
 .logo-img {
-  width: 65px;
-  height: 65px;
+  width: 80px;
+  height: 80px;
   margin-right: var(--space-md);
 }
 
@@ -304,7 +304,7 @@ ul {
 }
 
 .logo-text h1 {
-  font-size: 32px;
+  font-size: 40px;
   color: var(--green);
   margin-bottom: 0;
   line-height: 1;
@@ -470,10 +470,13 @@ ul {
 .hero-subtitle {
   font-size: var(--font-size-lg);
   margin-bottom: var(--space-xl);
-  font-weight: 300;
+  font-weight: 400; /* A bit more readable than 300 */
+  font-style: italic; /* Makes the tagline look elegant */
   max-width: 600px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  line-height: 1.6; /* Improves spacing for the two lines */
 }
+
 /* --- Hero Subtitle Styling --- */
 .hero-subtitle strong {
   font-family: var(--font-secondary);
@@ -691,6 +694,15 @@ ul {
   background-color: var(--green);
   color: var(--white);
   transform: translateY(-3px);
+}
+
+.brand-tagline {
+  font-family: var(--font-primary); /* Uses the modern 'Montserrat' font */
+  font-size: var(--font-size-lg);   /* Makes it clearly readable (18px) */
+  color: var(--sapphire);           /* Uses a professional brand color */
+  font-weight: 500;                 /* Medium weight for emphasis */
+  margin-top: calc(-1 * var(--space-md)); /* Pulls it closer to the title */
+  margin-bottom: var(--space-lg);   /* Adds space before the divider line */
 }
 
 /* --- Clinic Info 3-Card Grid (NEW) --- */
@@ -1198,7 +1210,7 @@ ul {
 }
 
 .product-card {
-  background-color: rgb(249, 191, 231);
+  background-color: #ffbfd9;
   border-radius: var(--border-radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-md);
