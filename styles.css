@@ -2534,6 +2534,16 @@ ul {
     /* This rule hides the video element on mobile to save data */
     display: none;
   }
+
+  .form-cta-description {
+    font-size: var(--font-size-sm); /* Adjusts text size for mobile */
+  }
+
+  .form-cta-btn {
+    padding: 12px 20px;
+    font-size: var(--font-size-sm); /* Makes the button a bit smaller and neater on mobile */
+  }
+  
 }
 
 /* --- Small Mobile Phones (Up to 480px) --- */
