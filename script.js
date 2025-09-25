@@ -424,4 +424,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Copy to Clipboard Functionality
+    const copyBtns = document.querySelectorAll('.copy-btn');
+
+    copyBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const textToCopy = btn.getAttribute('data-copy');
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                // Add 'copied' class to show tooltip
+                btn.classList.add('copied');
+
+                // Remove the class after 2 seconds
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        });
+    });
 }); // This is the final closing brace of your file

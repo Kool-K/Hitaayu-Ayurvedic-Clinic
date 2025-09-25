@@ -15,14 +15,15 @@
   /* Primary Brand Colors */
   --green: #0c972a;
   --sapphire: #2b50aa;
-  --peach: #f39197;
-  --white: #ffffff;
+  --peach: #e87078;
+  --white: #FFFFFF;
+  --blue-light: #DAF9FB;
 
   /* Tints & Shades */
   --green-dark: #087522;
   --green-tint: #e6f5e9;
   --peach-tint: #fdedee;
-  --peach-dark: #e57379;
+  --peach-dark: #d75c62;
 
   /* Neutral Colors */
   --black: #000000;
@@ -584,7 +585,7 @@ ul {
    ========================================================================== */
 .about {
   padding: var(--space-xxxl) 0;
-  background-color: var(--white);
+  background-color: var(--blue-light);
 }
 
 /* --- Doctors --- */
@@ -702,7 +703,7 @@ ul {
 
 .clinic-card {
   padding: var(--space-xl);
-  background-color: var(--white);
+  background-color: var(--peach-tint);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-md);
   display: flex;
@@ -710,6 +711,7 @@ ul {
   justify-content: center;
   transition: var(--transition-medium);
   border: 1px solid var(--background-light);
+  font-weight: 400;
 }
 
 .clinic-card:hover {
@@ -723,13 +725,26 @@ ul {
   padding-bottom: var(--space-sm);
 }
 
+.clinic-card-philosophy {
+  background-color: var(--peach-tint);
+  text-align: center; 
+}
+
 .clinic-card-philosophy h3 {
-  color: var(--green);
+  color: var(--sapphire); 
+}
+
+.clinic-card-philosophy p {
+  color: var(--text-color-light);
+}
+
+.clinic-card-philosophy strong {
+  color: var(--text-color);
 }
 
 /* --- New Approach Card Styling --- */
 .clinic-card-approach {
-  background-color: var(--green-tint); /* A distinct background */
+  background-color: var(--peach-tint); /* A distinct background */
   text-align: center;
 }
 
@@ -823,7 +838,7 @@ ul {
 /* --- Flipping Card Effect --- */
 .service-card {
   perspective: 1000px;
-  height: 400px;
+  height: 500px;
 }
 
 .card-inner {
@@ -1160,7 +1175,7 @@ ul {
    ========================================================================== */
 .products {
   padding: var(--space-xxxl) 0;
-  background-color: var(--white);
+  background-color:#DAF9FB;
   position: relative;
   z-index: 0;
 }
@@ -1175,7 +1190,7 @@ ul {
 }
 
 .product-card {
-  background-color: var(--white);
+  background-color: var(--peach-tint);
   border-radius: var(--border-radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-md);
@@ -1473,7 +1488,7 @@ ul {
    ========================================================================== */
 .daily-routines {
   padding: var(--space-xxxl) 0;
-  background-color: var(--white);
+  background-color: var(--blue-light);
 }
 
 /* Reusing tab styles for consistency */
@@ -1636,7 +1651,7 @@ ul {
    ========================================================================== */
 .contact {
   padding: var(--space-xxxl) 0;
-  background-color: var(--peach-tint);
+  background-color: var(--blue-light);
 }
 
 .contact-container {
@@ -1689,6 +1704,118 @@ ul {
   color: var(--text-color-light);
   font-size: var(--font-size-sm);
   margin-bottom: var(--space-xs);
+}
+
+/* --- New Disclaimer Card (in Contact section) --- */
+.disclaimer-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  grid-column: 1 / -1; /* Make it span full width */
+  text-align: center;
+  border: 1px solid var(--peach-tint);
+  font-weight: 600;
+}
+
+.disclaimer-card h4 {
+  margin-bottom: var(--space-md);
+  color: var(--sapphire);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disclaimer-card h4 i {
+  margin-right: var(--space-sm);
+  color: var(--sapphire);
+}
+
+.disclaimer-card p {
+    color: var(--text-color-light);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+/* --- Inline WhatsApp Icon --- */
+.whatsapp-inline-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #25d366;
+    color: var(--white);
+    border-radius: var(--border-radius-circle);
+    font-size: 14px;
+    margin-left: var(--space-sm);
+    transition: var(--transition-fast);
+    vertical-align: middle;
+}
+
+.whatsapp-inline-icon:hover {
+    transform: scale(1.1);
+    background-color: #128C7E;
+}
+
+/* --- New Contact Action Icons --- */
+.contact-item {
+  margin-bottom: var(--space-md);
+}
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+.contact-item p {
+  margin-bottom: var(--space-sm);
+}
+.contact-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+.contact-action-icon {
+  position: relative; /* Needed for tooltip positioning */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--green-tint);
+  color: var(--green);
+  border-radius: var(--border-radius-circle);
+  font-size: 14px;
+  transition: var(--transition-fast);
+  border: 1px solid transparent;
+  cursor: pointer; /* Ensures the copy button has a pointer cursor */
+}
+
+.contact-action-icon:hover {
+  transform: scale(1.1);
+  background-color: var(--green);
+  color: var(--white);
+  border-color: var(--green-dark);
+}
+
+/* Tooltip for Copy Button */
+.copy-btn::after {
+  content: 'Copied!';
+  position: absolute;
+  bottom: 120%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--sapphire);
+  color: var(--white);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-sm);
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  white-space: nowrap;
+}
+
+.copy-btn.copied::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .map-link {
@@ -1768,19 +1895,19 @@ ul {
    ========================================================================== */
 .faq {
   padding: var(--space-xxxl) 0;
-  background-color: var(--white);
+  background-color: var(--peach-tint);
 }
 
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
-  border: 1px solid var(--background-light);
+  border: 4px solid var(--black);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
 }
 
 .faq-item {
-  border-bottom: 1px solid var(--background-light);
+  border-bottom: 1px solid var(--black);
 }
 .faq-item:last-child {
   border-bottom: none;
@@ -1814,8 +1941,13 @@ ul {
 
 .faq-answer {
   max-height: 0;
+  font-weight: 1000;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
+  background-color: var(--white);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #000000;
 }
 
 .faq-answer p {
@@ -1837,7 +1969,7 @@ ul {
    12. Footer
    ========================================================================== */
 .footer {
-  background-color: var(--green);
+  background-color: var(--sapphire);
   color: var(--white);
   padding-top: var(--space-xxxl);
 }
@@ -1902,6 +2034,8 @@ ul {
   margin-bottom: var(--space-lg);
   position: relative;
   padding-bottom: var(--space-sm);
+  color: var(--white);
+  font-weight: 600;
 }
 
 .footer-title::after {
