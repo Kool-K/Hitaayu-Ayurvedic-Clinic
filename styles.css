@@ -16,8 +16,8 @@
   --green: #0c972a;
   --sapphire: #2b50aa;
   --peach: #e87078;
-  --white: #FFFFFF;
-  --blue-light: #DAF9FB;
+  --white: #ffffff;
+  --blue-light: #daf9fb;
 
   /* Tints & Shades */
   --green-dark: #087522;
@@ -699,6 +699,7 @@ ul {
   grid-template-columns: 1fr; /* Default to single column for mobile */
   gap: var(--space-lg);
   margin-bottom: var(--space-xxxl);
+  align-items: stretch;
 }
 
 .clinic-card {
@@ -732,11 +733,11 @@ ul {
 
 .clinic-card-philosophy {
   background-color: var(--peach-tint);
-  text-align: center; 
+  text-align: center;
 }
 
 .clinic-card-philosophy h3 {
-  color: var(--sapphire); 
+  color: var(--sapphire);
 }
 
 .clinic-card-philosophy p {
@@ -797,14 +798,11 @@ ul {
 
 /* --- Specializations --- */
 .specializations-info {
-  max-width: 1000px;
   margin: 0 auto;
   padding: var(--space-xl);
-  background-color: var(--white);
-  border-radius: var(--border-radius-xl);
+  background-color: var(--peach-tint); /* Keeps its unique white background */
   border: 1px solid var(--green-tint);
   text-align: center;
-  box-shadow: var(--shadow-sm);
 }
 
 .specializations-info h3 {
@@ -1180,7 +1178,7 @@ ul {
    ========================================================================== */
 .products {
   padding: var(--space-xxxl) 0;
-  background-color:#DAF9FB;
+  background-color: #daf9fb;
   position: relative;
   z-index: 0;
 }
@@ -1739,30 +1737,30 @@ ul {
 }
 
 .disclaimer-card p {
-    color: var(--text-color-light);
-    font-size: var(--font-size-sm);
-    line-height: 1.6;
+  color: var(--text-color-light);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
 }
 
 /* --- Inline WhatsApp Icon --- */
 .whatsapp-inline-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background-color: #25d366;
-    color: var(--white);
-    border-radius: var(--border-radius-circle);
-    font-size: 14px;
-    margin-left: var(--space-sm);
-    transition: var(--transition-fast);
-    vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #25d366;
+  color: var(--white);
+  border-radius: var(--border-radius-circle);
+  font-size: 14px;
+  margin-left: var(--space-sm);
+  transition: var(--transition-fast);
+  vertical-align: middle;
 }
 
 .whatsapp-inline-icon:hover {
-    transform: scale(1.1);
-    background-color: #128C7E;
+  transform: scale(1.1);
+  background-color: #128c7e;
 }
 
 /* --- New Contact Action Icons --- */
@@ -1804,7 +1802,7 @@ ul {
 
 /* Tooltip for Copy Button */
 .copy-btn::after {
-  content: 'Copied!';
+  content: "Copied!";
   position: absolute;
   bottom: 120%; /* Position above the icon */
   left: 50%;
@@ -2297,7 +2295,7 @@ ul {
 
 @media (min-width: 1024px) {
   .clinic-info-grid {
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); /* This creates a 2x2 grid */
   }
   .clinic-card-tagline {
     grid-column: auto;
@@ -2370,20 +2368,18 @@ ul {
     flex-direction: column;
     max-width: 350px; /* Adjust max-width for better fit */
     margin: 0 auto; /* Center the card */
-}
-.doctor-img-container {
+  }
+  .doctor-img-container {
     width: 100%;
     height: auto; /* Allow height to be automatic */
     aspect-ratio: 1 / 1; /* Creates a perfect square for the image */
-}
+  }
 
-
-.logo-tagline {
+  .logo-tagline {
     font-size: 10px;
     white-space: normal; /* Allows the text to wrap */
     max-width: 150px; /* Constrains its width */
-}
-
+  }
 }
 
 /* --- Mobile Devices (Up to 768px) --- */
@@ -2424,7 +2420,7 @@ ul {
     max-width: 100%; /* prevent going wider than screen */
     box-sizing: border-box;
   }
-  
+
   .clinic-info-grid {
     grid-template-columns: 1fr; /* Back to single column */
   }
@@ -2432,11 +2428,11 @@ ul {
   .clinic-card-tagline {
     grid-column: auto; /* Reset column span */
   }
-.clinic-card-stats {
+  .clinic-card-stats {
     flex-direction: row;
     justify-content: space-around;
     padding: var(--space-lg); /* Add some padding */
-}
+  }
 
   /* Modal */
   .modal-body {
@@ -2444,13 +2440,13 @@ ul {
   }
 
   /* Other Sections */
-.tip-main {
+  .tip-main {
     flex-direction: column; /* Stacks the image on top of the text */
     align-items: stretch;
-}
-.tip-image {
+  }
+  .tip-image {
     width: 100%; /* Makes the image full-width on mobile */
-}
+  }
   .contact-info {
     grid-template-columns: 1fr; /* Stack contact cards */
   }
@@ -2476,25 +2472,23 @@ ul {
     transform: translateX(-50%);
   }
 
-
-.hero-content {
+  .hero-content {
     margin-bottom: 20px; /* Adds space above the buttons */
-}
-.hero .hero-buttons {
+  }
+  .hero .hero-buttons {
     margin-bottom: 150px; /* Pushes buttons up to make space for the tip */
-}
+  }
 
-.hero-video {
+  .hero-video {
     /* This rule ensures the fallback image is visible on mobile */
-    background-image: url('assets/hero-fallback2.png');
+    background-image: url("assets/hero-fallback2.png");
     background-size: cover;
     background-position: center;
-}
-.hero-video video {
+  }
+  .hero-video video {
     /* This rule hides the video element on mobile to save data */
     display: none;
-}
-
+  }
 }
 
 /* --- Small Mobile Phones (Up to 480px) --- */
