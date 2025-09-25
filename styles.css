@@ -714,6 +714,12 @@ ul {
   font-weight: 400;
 }
 
+/* overflow issue fix for phones */
+.clinic-card p {
+  word-wrap: break-word; /* Ensures long words can break and wrap to the next line */
+  overflow-wrap: break-word; /* Modern property for the same behavior */
+}
+
 .clinic-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
