@@ -2361,9 +2361,7 @@ ul {
     font-size: 24px;
   }
 
-  /* Sections */
-/* Find and replace these rules inside the @media (max-width: 992px) query */
-.doctor-card {
+  .doctor-card {
     flex-direction: column;
     max-width: 350px; /* Adjust max-width for better fit */
     margin: 0 auto; /* Center the card */
@@ -2373,6 +2371,14 @@ ul {
     height: auto; /* Allow height to be automatic */
     aspect-ratio: 1 / 1; /* Creates a perfect square for the image */
 }
+
+
+.logo-tagline {
+    font-size: 10px;
+    white-space: normal; /* Allows the text to wrap */
+    max-width: 150px; /* Constrains its width */
+}
+
 }
 
 /* --- Mobile Devices (Up to 768px) --- */
@@ -2458,18 +2464,7 @@ ul {
   }
 
 
-  /* disable video on smaller devices like phones */
-  .hero-video video {
-        display: none; /* Hides the video element */
-    }
-    .hero-video {
-         /* Ensures the poster image is visible */
-        background-image: url('../assets/hero-fallback2.png');
-        background-size: cover;
-        background-position: center;
-    }
-
-    /* Add this new block at the end of the @media (max-width: 768px) query */
+/* Add this new block at the end of the @media (max-width: 768px) query */
 .hero-content {
     margin-bottom: 20px; /* Adds space above the buttons */
 }
@@ -2477,15 +2472,18 @@ ul {
     margin-bottom: 150px; /* Pushes buttons up to make space for the tip */
 }
 
-/* This rule ensures the fallback image is visible on mobile */
+/* Find and replace the .hero-video rules inside @media (max-width: 768px) */
 .hero-video {
-    background-image: url('../assets/hero-fallback2.png');
+    /* This rule ensures the fallback image is visible on mobile */
+    background-image: url('assets/hero-fallback2.png');
     background-size: cover;
     background-position: center;
 }
 .hero-video video {
-    display: none; /* Hides the video element on mobile */
+    /* This rule hides the video element on mobile to save data */
+    display: none;
 }
+
 }
 
 /* --- Small Mobile Phones (Up to 480px) --- */
