@@ -714,7 +714,6 @@ ul {
   font-weight: 400;
 }
 
-/* overflow issue fix for phones */
 .clinic-card p {
   word-wrap: break-word; /* Ensures long words can break and wrap to the next line */
   overflow-wrap: break-word; /* Modern property for the same behavior */
@@ -2393,8 +2392,9 @@ ul {
   .section-title {
     font-size: 28px;
   }
+
   .container {
-    padding: 0 var(--space-lg);
+    padding: 0 var(--space-md); /* reduce container padding */
   }
 
   /* Hero Section */
@@ -2418,6 +2418,13 @@ ul {
   }
 
   /* About Section */
+  .clinic-card {
+    padding: var(--space-md); /* reduce padding */
+    margin: 0 auto; /* center and prevent overflow */
+    max-width: 100%; /* prevent going wider than screen */
+    box-sizing: border-box;
+  }
+  
   .clinic-info-grid {
     grid-template-columns: 1fr; /* Back to single column */
   }
@@ -2470,7 +2477,6 @@ ul {
   }
 
 
-/* Add this new block at the end of the @media (max-width: 768px) query */
 .hero-content {
     margin-bottom: 20px; /* Adds space above the buttons */
 }
@@ -2478,7 +2484,6 @@ ul {
     margin-bottom: 150px; /* Pushes buttons up to make space for the tip */
 }
 
-/* Find and replace the .hero-video rules inside @media (max-width: 768px) */
 .hero-video {
     /* This rule ensures the fallback image is visible on mobile */
     background-image: url('assets/hero-fallback2.png');
