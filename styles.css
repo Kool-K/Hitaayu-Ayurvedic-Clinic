@@ -797,13 +797,17 @@ ul {
 }
 
 /* --- Specializations --- */
-.specializations-info {
+
+/* .specializations-info {
+  background-color: var(--peach-tint);
+  text-align: center;
   margin: 0 auto;
-  padding: var(--space-xl);
-  background-color: var(--peach-tint); /* Keeps its unique white background */
-  border: 1px solid var(--green-tint);
+  padding: var(--space-xl); 
+} */
+ .specializations-info {
   text-align: center;
 }
+
 
 .specializations-info h3 {
   color: var(--sapphire);
