@@ -114,12 +114,15 @@ h6 {
 h1 {
   font-size: var(--font-size-h1);
 }
+
 h2 {
   font-size: var(--font-size-h2);
 }
+
 h3 {
   font-size: var(--font-size-h3);
 }
+
 h4 {
   font-size: var(--font-size-h4);
 }
@@ -166,7 +169,8 @@ ul {
   position: relative;
   overflow: hidden;
   border: none;
-  -webkit-backface-visibility: hidden; /* Helps prevent vibration on hover */
+  -webkit-backface-visibility: hidden;
+  /* Helps prevent vibration on hover */
   backface-visibility: hidden;
 }
 
@@ -336,7 +340,8 @@ ul {
   padding: 8px 16px;
   border-radius: var(--border-radius-rounded);
   transition: var(--transition-fast);
-  white-space: nowrap; /* Prevents links like "Health Tips" from breaking */
+  white-space: nowrap;
+  /* Prevents links like "Health Tips" from breaking */
 }
 
 .nav-link:hover {
@@ -370,9 +375,11 @@ ul {
 .mobile-menu-btn.active .menu-bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
+
 .mobile-menu-btn.active .menu-bar:nth-child(2) {
   opacity: 0;
 }
+
 .mobile-menu-btn.active .menu-bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
@@ -443,12 +450,12 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(12, 151, 42, 0.6) 0%,
-    /* Semi-transparent Green */ rgba(43, 80, 170, 0.7) 100%
+  background: linear-gradient(135deg,
+      rgba(12, 151, 42, 0.6) 0%,
+      /* Semi-transparent Green */
+      rgba(43, 80, 170, 0.7) 100%
       /* Semi-transparent Sapphire */
-  );
+    );
   z-index: 1;
 }
 
@@ -470,11 +477,14 @@ ul {
 .hero-subtitle {
   font-size: var(--font-size-lg);
   margin-bottom: var(--space-xl);
-  font-weight: 400; /* A bit more readable than 300 */
-  font-style: italic; /* Makes the tagline look elegant */
+  font-weight: 400;
+  /* A bit more readable than 300 */
+  font-style: italic;
+  /* Makes the tagline look elegant */
   max-width: 600px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  line-height: 1.6; /* Improves spacing for the two lines */
+  line-height: 1.6;
+  /* Improves spacing for the two lines */
 }
 
 /* --- Hero Subtitle Styling --- */
@@ -487,7 +497,8 @@ ul {
 .hero-buttons {
   display: flex;
   gap: var(--space-md);
-  margin-bottom: 120px; /* ADDED: Pushes buttons up to make space for the tip */
+  margin-bottom: 120px;
+  /* ADDED: Pushes buttons up to make space for the tip */
 }
 
 /* Hero button outline variant */
@@ -697,18 +708,25 @@ ul {
 }
 
 .brand-tagline {
-  font-family: var(--font-primary); /* Uses the modern 'Montserrat' font */
-  font-size: var(--font-size-lg);   /* Makes it clearly readable (18px) */
-  color: var(--sapphire);           /* Uses a professional brand color */
-  font-weight: 500;                 /* Medium weight for emphasis */
-  margin-top: calc(-1 * var(--space-md)); /* Pulls it closer to the title */
-  margin-bottom: var(--space-lg);   /* Adds space before the divider line */
+  font-family: var(--font-primary);
+  /* Uses the modern 'Montserrat' font */
+  font-size: var(--font-size-lg);
+  /* Makes it clearly readable (18px) */
+  color: var(--sapphire);
+  /* Uses a professional brand color */
+  font-weight: 500;
+  /* Medium weight for emphasis */
+  margin-top: calc(-1 * var(--space-md));
+  /* Pulls it closer to the title */
+  margin-bottom: var(--space-lg);
+  /* Adds space before the divider line */
 }
 
 /* --- Clinic Info 3-Card Grid (NEW) --- */
 .clinic-info-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Default to single column for mobile */
+  grid-template-columns: 1fr;
+  /* Default to single column for mobile */
   gap: var(--space-lg);
   margin-bottom: var(--space-xxxl);
   align-items: stretch;
@@ -728,8 +746,10 @@ ul {
 }
 
 .clinic-card p {
-  word-wrap: break-word; /* Ensures long words can break and wrap to the next line */
-  overflow-wrap: break-word; /* Modern property for the same behavior */
+  word-wrap: break-word;
+  /* Ensures long words can break and wrap to the next line */
+  overflow-wrap: break-word;
+  /* Modern property for the same behavior */
 }
 
 .clinic-card:hover {
@@ -762,7 +782,8 @@ ul {
 
 /* --- New Approach Card Styling --- */
 .clinic-card-approach {
-  background-color: var(--peach-tint); /* A distinct background */
+  background-color: var(--peach-tint);
+  /* A distinct background */
   text-align: center;
 }
 
@@ -816,7 +837,7 @@ ul {
   margin: 0 auto;
   padding: var(--space-xl); 
 } */
- .specializations-info {
+.specializations-info {
   text-align: center;
 }
 
@@ -937,7 +958,8 @@ ul {
 }
 
 .service-card:hover .interaction-cue {
-  opacity: 0; /* Hide the cue when hovering */
+  opacity: 0;
+  /* Hide the cue when hovering */
 }
 
 .interaction-cue i {
@@ -977,14 +999,16 @@ ul {
 
 .service-highlights i {
   margin-right: var(--space-sm);
-  color: #7ef197; /* Light Green for checkmarks */
+  color: #7ef197;
+  /* Light Green for checkmarks */
   margin-top: 4px;
 }
 
 .card-back .btn-outline {
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.8);
-  margin-top: auto; /* Pushes button to the bottom */
+  margin-top: auto;
+  /* Pushes button to the bottom */
 }
 
 .card-back .btn-outline:hover {
@@ -1047,7 +1071,8 @@ ul {
   border-radius: var(--border-radius-xl);
   box-shadow: var(--shadow-lg);
   animation: modalFadeIn 0.5s ease-out;
-  position: relative; /* For close button positioning */
+  position: relative;
+  /* For close button positioning */
 }
 
 .close-modal {
@@ -1088,14 +1113,16 @@ ul {
 
 .modal-body {
   display: grid;
-  grid-template-columns: 1fr; /* Single column for mobile-first */
+  grid-template-columns: 1fr;
+  /* Single column for mobile-first */
   /* ADDED: This creates space on all sides of the content area */
   padding: var(--space-xl);
 }
 
 .modal-image {
   width: 100%;
-  aspect-ratio: 3 / 2; /* Forces the container to a 3:2 ratio */
+  aspect-ratio: 3 / 2;
+  /* Forces the container to a 3:2 ratio */
   overflow: hidden;
   border-radius: var(--border-radius-md);
 }
@@ -1116,6 +1143,7 @@ ul {
   padding-bottom: var(--space-xl);
   border-bottom: 1px dashed var(--border-color);
 }
+
 .phase:last-of-type {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -1262,7 +1290,8 @@ ul {
 .product-desc {
   color: var(--text-color-light);
   margin-bottom: var(--space-lg);
-  flex-grow: 1; /* Allows this to take up available space */
+  flex-grow: 1;
+  /* Allows this to take up available space */
   min-height: 90px;
 }
 
@@ -1281,7 +1310,8 @@ ul {
 }
 
 .product-details.active {
-  max-height: 500px; /* Adjust if content is taller */
+  max-height: 500px;
+  /* Adjust if content is taller */
   margin-top: var(--space-lg);
   padding-top: var(--space-lg);
   border-top: 1px solid var(--background-light);
@@ -1290,6 +1320,7 @@ ul {
 .details-section {
   margin-bottom: var(--space-lg);
 }
+
 .details-section:last-child {
   margin-bottom: 0;
 }
@@ -1341,15 +1372,18 @@ ul {
   display: flex;
   border-bottom: 1px solid var(--background-light);
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .tabs-nav::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 .tab-btn {
-  flex: 1 1 0; /* Allows buttons to grow and shrink equally */
+  flex: 1 1 0;
+  /* Allows buttons to grow and shrink equally */
   min-width: 150px;
   padding: var(--space-lg);
   background-color: transparent;
@@ -1453,15 +1487,18 @@ ul {
 .tip-main {
   /* MODIFIED: Use Flexbox for a side-by-side layout on desktop */
   display: flex;
-  flex-direction: row; /* This makes it side-by-side */
+  flex-direction: row;
+  /* This makes it side-by-side */
   gap: var(--space-xl);
-  align-items: center; /* This vertically aligns the text with the image's center */
+  align-items: center;
+  /* This vertically aligns the text with the image's center */
 }
 
 /* Find and replace this rule */
 .tip-image {
   /* MODIFIED: Set a width and remove the height constraint */
-  width: 40%; /* The image will take up 40% of the card's width */
+  width: 40%;
+  /* The image will take up 40% of the card's width */
   flex-shrink: 0;
   border-radius: var(--border-radius-md);
   overflow: hidden;
@@ -1733,7 +1770,8 @@ ul {
   border-radius: var(--border-radius-lg);
   padding: var(--space-lg);
   box-shadow: var(--shadow-sm);
-  grid-column: 1 / -1; /* Make it span full width */
+  grid-column: 1 / -1;
+  /* Make it span full width */
   text-align: center;
   border: 1px solid var(--peach-tint);
   font-weight: 600;
@@ -1783,18 +1821,23 @@ ul {
 .contact-item {
   margin-bottom: var(--space-md);
 }
+
 .contact-item:last-child {
   margin-bottom: 0;
 }
+
 .contact-item p {
   margin-bottom: var(--space-sm);
 }
+
 .contact-actions {
   display: flex;
   gap: var(--space-sm);
 }
+
 .contact-action-icon {
-  position: relative; /* Needed for tooltip positioning */
+  position: relative;
+  /* Needed for tooltip positioning */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1806,7 +1849,8 @@ ul {
   font-size: 14px;
   transition: var(--transition-fast);
   border: 1px solid transparent;
-  cursor: pointer; /* Ensures the copy button has a pointer cursor */
+  cursor: pointer;
+  /* Ensures the copy button has a pointer cursor */
 }
 
 .contact-action-icon:hover {
@@ -1820,7 +1864,8 @@ ul {
 .copy-btn::after {
   content: "Copied!";
   position: absolute;
-  bottom: 120%; /* Position above the icon */
+  bottom: 120%;
+  /* Position above the icon */
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--sapphire);
@@ -1863,7 +1908,8 @@ ul {
   border-radius: var(--border-radius-lg);
   padding: var(--space-lg);
   box-shadow: var(--shadow-sm);
-  grid-column: 1 / -1; /* Make it span full width */
+  grid-column: 1 / -1;
+  /* Make it span full width */
   text-align: center;
 }
 
@@ -1923,7 +1969,8 @@ ul {
 
 .form-cta-btn {
   margin-top: var(--space-md);
-  background-color: var(--sapphire); /* A distinct, professional color */
+  background-color: var(--sapphire);
+  /* A distinct, professional color */
   color: var(--white);
   box-shadow: 0 4px 12px rgba(43, 80, 170, 0.3);
   padding: 14px 28px;
@@ -1931,7 +1978,8 @@ ul {
 }
 
 .form-cta-btn:hover {
-  background-color: #22408a; /* A darker sapphire for hover */
+  background-color: #22408a;
+  /* A darker sapphire for hover */
   box-shadow: 0 6px 16px rgba(43, 80, 170, 0.4);
   transform: translateY(-2px);
 }
@@ -1959,6 +2007,7 @@ ul {
 .faq-item {
   border-bottom: 1px solid var(--black);
 }
+
 .faq-item:last-child {
   border-bottom: none;
 }
@@ -2012,7 +2061,8 @@ ul {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 300px; /* Adjust if answers are very long */
+  max-height: 300px;
+  /* Adjust if answers are very long */
 }
 
 /* ==========================================================================
@@ -2196,10 +2246,12 @@ ul {
   border-radius: 50%;
   animation: spin 1.5s linear infinite;
 }
+
 .loader-leaf:nth-child(2) {
   animation-delay: 0.15s;
   border-top-color: var(--peach);
 }
+
 .loader-leaf:nth-child(3) {
   animation-delay: 0.3s;
   border-top-color: var(--sapphire);
@@ -2268,6 +2320,7 @@ ul {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -2277,15 +2330,18 @@ ul {
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0px);
   }
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -2293,9 +2349,11 @@ ul {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: translateY(-10px);
   }
@@ -2305,9 +2363,11 @@ ul {
   0% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
   }
+
   70% {
     box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
@@ -2318,6 +2378,7 @@ ul {
     opacity: 0;
     transform: scale(0.95) translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -2333,6 +2394,7 @@ ul {
   .hero-title {
     font-size: 56px;
   }
+
   .section-title {
     font-size: 36px;
   }
@@ -2340,8 +2402,10 @@ ul {
 
 @media (min-width: 1024px) {
   .clinic-info-grid {
-    grid-template-columns: repeat(2, 1fr); /* This creates a 2x2 grid */
+    grid-template-columns: repeat(2, 1fr);
+    /* This creates a 2x2 grid */
   }
+
   .clinic-card-tagline {
     grid-column: auto;
   }
@@ -2350,15 +2414,21 @@ ul {
   .modal-body {
     /* Switching back to flex for better control over image/text alignment */
     display: flex;
-    flex-wrap: wrap; /* Allows text to wrap below the image if needed */
-    justify-content: center; /* This centers the image horizontally */
-    align-items: flex-start; /* Aligns content at the top */
-    gap: var(--space-xl); /* Add spacing between image and text */
+    flex-wrap: wrap;
+    /* Allows text to wrap below the image if needed */
+    justify-content: center;
+    /* This centers the image horizontally */
+    align-items: flex-start;
+    /* Aligns content at the top */
+    gap: var(--space-xl);
+    /* Add spacing between image and text */
   }
 
   .modal-image {
-    width: 40%; /* Image takes 40% of the available width */
-    flex-shrink: 0; /* Prevents image from shrinking */
+    width: 40%;
+    /* Image takes 40% of the available width */
+    flex-shrink: 0;
+    /* Prevents image from shrinking */
     /* REMOVED: float: left; margin-right: var(--space-xl); margin-bottom: var(--space-md); */
     /* These float properties are no longer needed with flexbox */
   }
@@ -2366,10 +2436,12 @@ ul {
 
 /* --- Small Tablets & Large Phones (Up to 992px) --- */
 @media (max-width: 992px) {
+
   /* Header & Mobile Nav */
   .mobile-menu-btn {
     display: flex;
   }
+
   .nav-list {
     position: fixed;
     top: 0;
@@ -2387,13 +2459,16 @@ ul {
     padding-top: 80px;
     overflow-y: auto;
   }
+
   .nav-list.active {
     right: 0;
   }
+
   .nav-item {
     margin: 0;
     width: 100%;
   }
+
   .nav-list .nav-link {
     display: block;
     width: 100%;
@@ -2401,41 +2476,52 @@ ul {
     border-bottom: 1px solid var(--background-light);
     border-radius: 0;
   }
+
   .logo-img {
     width: 50px;
     height: 50px;
   }
+
   .logo-text h1 {
     font-size: 24px;
   }
 
   .doctor-card {
     flex-direction: column;
-    max-width: 350px; /* Adjust max-width for better fit */
-    margin: 0 auto; /* Center the card */
+    max-width: 350px;
+    /* Adjust max-width for better fit */
+    margin: 0 auto;
+    /* Center the card */
   }
+
   .doctor-img-container {
     width: 100%;
-    height: auto; /* Allow height to be automatic */
-    aspect-ratio: 1 / 1; /* Creates a perfect square for the image */
+    height: auto;
+    /* Allow height to be automatic */
+    aspect-ratio: 1 / 1;
+    /* Creates a perfect square for the image */
   }
 
   .logo-tagline {
     font-size: 10px;
-    white-space: normal; /* Allows the text to wrap */
-    max-width: 150px; /* Constrains its width */
+    white-space: normal;
+    /* Allows the text to wrap */
+    max-width: 150px;
+    /* Constrains its width */
   }
 }
 
 /* --- Mobile Devices (Up to 768px) --- */
 @media (max-width: 768px) {
+
   /* Base & Typography */
   .section-title {
     font-size: 28px;
   }
 
   .container {
-    padding: 0 var(--space-md); /* reduce container padding */
+    padding: 0 var(--space-md);
+    /* reduce container padding */
   }
 
   /* Hero Section */
@@ -2443,123 +2529,166 @@ ul {
     min-height: 600px;
     padding-top: 70px;
   }
+
   .hero-title {
     font-size: 36px;
   }
+
   .hero-subtitle {
     font-size: 16px;
   }
+
   .hero-buttons {
     flex-direction: column;
     width: 100%;
     max-width: 300px;
   }
+
   .tip-text {
     font-size: 14px;
   }
-  .doctor-tip {
-    position: relative; /* This is the KEY: Puts the tip in the normal document flow */
-    bottom: auto;       /* Resets the absolute positioning */
-    left: auto;
-    right: auto;
-    width: 100%;        /* Ensures it fits within the container */
-    padding: 0 var(--space-md); /* Adds some side padding */
-    margin-top: 0;      /* Removes any inherited top margin */
-  }
+}
+  /* 
+  in case if the tip overlaps with the buttons
+  .hero-buttons {
+    /* We no longer need the huge fixed margin here */
+  /* margin-bottom: var(--space-xxxl);  */
+ 
 
-  /* About Section */
-  .clinic-card {
-    padding: var(--space-md); /* reduce padding */
-    margin: 0 auto; /* center and prevent overflow */
-    max-width: 100%; /* prevent going wider than screen */
-    box-sizing: border-box;
-  }
-
-  .clinic-info-grid {
-    grid-template-columns: 1fr; /* Back to single column */
-  }
-  .clinic-card-philosophy,
-  .clinic-card-tagline {
-    grid-column: auto; /* Reset column span */
-  }
-.clinic-card-stats {
-  flex-direction: column;   /* THE FIX: Stacks the stats vertically */
-  gap: var(--space-xl);       /* Adds nice spacing between the stacked items */
-  padding: var(--space-xl); 
+.doctor-tip {
+  position: relative;
+  /* This is the KEY: Puts the tip in the normal document flow */
+  bottom: auto;
+  /* Resets the absolute positioning */
+  left: auto;
+  right: auto;
+  width: 100%;
+  /* Ensures it fits within the container */
+  padding: 0 var(--space-md);
+  /* Adds some side padding */
+  margin-top: 0;
+  /* Removes any inherited top margin */
 }
 
-  /* Modal */
-  .modal-body {
-    grid-template-columns: 1fr; /* Stack image and text in modal */
-  }
+/* About Section */
+.clinic-card {
+  padding: var(--space-md);
+  /* reduce padding */
+  margin: 0 auto;
+  /* center and prevent overflow */
+  max-width: 100%;
+  /* prevent going wider than screen */
+  box-sizing: border-box;
+}
 
-  /* Other Sections */
-  .tip-main {
-    flex-direction: column; /* Stacks the image on top of the text */
-    align-items: stretch;
-  }
-  .tip-image {
-    width: 100%; /* Makes the image full-width on mobile */
-  }
-  .contact-info {
-    grid-template-columns: 1fr; /* Stack contact cards */
-  }
-  .info-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .info-icon {
-    margin-right: 0;
-    margin-bottom: var(--space-md);
-  }
-  .footer-grid {
-    text-align: center;
-  }
-  .footer-logo,
-  .footer-social,
-  .footer-contact li {
-    justify-content: center;
-  }
-  .footer-title::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.clinic-info-grid {
+  grid-template-columns: 1fr;
+  /* Back to single column */
+}
 
-  .hero-content {
-    margin-bottom: 20px; /* Adds space above the buttons */
-  }
-  .hero .hero-buttons {
-    margin-bottom: 150px; /* Pushes buttons up to make space for the tip */
-  }
+.clinic-card-philosophy,
+.clinic-card-tagline {
+  grid-column: auto;
+  /* Reset column span */
+}
 
-  .hero-video {
-    /* This rule ensures the fallback image is visible on mobile */
-    background-image: url("assets/hero-fallback2.png");
-    background-size: cover;
-    background-position: center;
-  }
-  .hero-video video {
-    /* This rule hides the video element on mobile to save data */
-    display: none;
-  }
+.clinic-card-stats {
+  flex-direction: column;
+  /* THE FIX: Stacks the stats vertically */
+  gap: var(--space-xl);
+  /* Adds nice spacing between the stacked items */
+  padding: var(--space-xl);
+}
 
-  .form-cta-description {
-    font-size: var(--font-size-sm); /* Adjusts text size for mobile */
-  }
+/* Modal */
+.modal-body {
+  grid-template-columns: 1fr;
+  /* Stack image and text in modal */
+}
 
-  .form-cta-btn {
-    padding: 12px 20px;
-    font-size: var(--font-size-sm); /* Makes the button a bit smaller and neater on mobile */
-  }
+/* Other Sections */
+.tip-main {
+  flex-direction: column;
+  /* Stacks the image on top of the text */
+  align-items: stretch;
+}
 
+.tip-image {
+  width: 100%;
+  /* Makes the image full-width on mobile */
+}
+
+.contact-info {
+  grid-template-columns: 1fr;
+  /* Stack contact cards */
+}
+
+.info-card {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-icon {
+  margin-right: 0;
+  margin-bottom: var(--space-md);
+}
+
+.footer-grid {
+  text-align: center;
+}
+
+.footer-logo,
+.footer-social,
+.footer-contact li {
+  justify-content: center;
+}
+
+.footer-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-content {
+  margin-bottom: 20px;
+  /* Adds space above the buttons */
+}
+
+.hero .hero-buttons {
+  /* margin-bottom: 150px; Pushes buttons up to make space for the tip */
+  margin-bottom: var(--space-xxl);
+}
+
+.hero-video {
+  /* This rule ensures the fallback image is visible on mobile */
+  background-image: url("assets/hero-fallback2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-video video {
+  /* This rule hides the video element on mobile to save data */
+  display: none;
+}
+
+.form-cta-description {
+  font-size: var(--font-size-sm);
+  /* Adjusts text size for mobile */
+}
+
+.form-cta-btn {
+  padding: 12px 20px;
+  font-size: var(--font-size-sm);
+  /* Makes the button a bit smaller and neater on mobile */
 }
 
 /* --- Small Mobile Phones (Up to 480px) --- */
 @media (max-width: 480px) {
   html {
     font-size: 15px;
-  } /* Slightly increase base font for readability */
+  }
+
+  /* Slightly increase base font for readability */
 
   .container {
     padding: 0 var(--space-md);
@@ -2570,6 +2699,7 @@ ul {
     height: 50px;
     font-size: 24px;
   }
+
   .back-to-top {
     width: 40px;
     height: 40px;
