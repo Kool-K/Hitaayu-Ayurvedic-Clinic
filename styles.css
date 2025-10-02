@@ -1866,17 +1866,35 @@ ul {
 }
 
 /* --- New Contact Action Icons --- */
+/* In styles.css, replace the existing .contact-item rule */
 .contact-item {
-  margin-bottom: var(--space-md);
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md); /* NEW: Adds spacing if items wrap */
+}
+
+/* In styles.css, REPLACE the existing .contact-item p rule */
+.contact-item p {
+    margin-bottom: 0;
+    flex-grow: 1; /* NEW: This is the key change that pushes the buttons away */
+    margin-right: var(--space-md); /* NEW: Ensures a minimum space */
+}
+
+/* ADD this new rule for the button container */
+.contact-actions {
+    display: flex;
+    gap: var(--space-sm);
+    flex-shrink: 0; /* NEW: Prevents the buttons from getting squished */
 }
 
 .contact-item:last-child {
   margin-bottom: 0;
 }
 
-.contact-item p {
-  margin-bottom: var(--space-sm);
-}
+
 
 .contact-actions {
   display: flex;
@@ -2611,6 +2629,10 @@ ul {
     width: 100%;
     max-width: 450px;
     box-sizing: border-box; /* Prevents padding from causing overflow */
+}
+.contact-item {
+    flex-direction: column; /* Stacks the text and buttons vertically */
+    align-items: center;    /* Centers them horizontally */
 }
 }
 
