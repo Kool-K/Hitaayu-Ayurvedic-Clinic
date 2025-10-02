@@ -512,16 +512,7 @@ ul {
   color: var(--green);
 }
 
-/* --- Doctor's Tip (FIXED) --- */
-.doctor-tip {
-  position: absolute;
-  /* MODIFIED: Lowered the tip to sit below the buttons */
-  bottom: 80px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-}
+
 
 .tip-container {
   background-color: rgba(255, 255, 255, 0.9);
@@ -593,6 +584,63 @@ ul {
   transform: rotate(-45deg);
   margin-top: var(--space-xs);
 }
+
+/* ==========================================================================
+   5.5. Daily Tip Section
+   ========================================================================== */
+.daily-tip-section {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--peach-tint);
+    display: flex;           /* Use flexbox for layout */
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;     /* Center children horizontally */
+    gap: var(--space-lg);      /* Creates space BETWEEN the title and the tip */
+}
+/* ADD these new rules for the headline */
+
+.tip-section-title {
+    color: var(--green);
+    font-size: 24px;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    /* margin-bottom: var(--space-xl); INCREASED: More space below the title */
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    position: relative; /* Required for the decorative line */
+    padding-bottom: var(--space-sm); /* Adds space for the line */
+}
+
+/* NEW: This adds the decorative line under the title */
+.tip-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Adjust width of the line as you like */
+    height: 2px;
+    background-color: var(--peach);
+}
+
+.tip-section-title i {
+    color: var(--peach);
+}
+
+/* The .tip-container styles are now for the standalone section */
+.tip-container {
+  background-color: var(--white); /* Solid white looks cleaner on a solid background */
+  color: var(--text-color);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--border-radius-rounded);
+  display: inline-flex; /* Allows the container to size to its content */
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  max-width: 800px;
+  text-align: left; /* Keeps the text inside left-aligned */
+  animation: float 6s ease-in-out infinite; /* Keeps the cool hover effect */
+}
+
 
 /* ==========================================================================
    6. About Section
@@ -2545,17 +2593,24 @@ ul {
     margin-bottom: var(--space-xxxl);
   }
 
-  .tip-text {
-    font-size: 14px;
-  }
-  .doctor-tip {
-  position: relative;
-  bottom: auto;
-  left: auto;
-  right: auto;
-  width: 100%;
-  padding: 0 var(--space-md);
-  margin-top: 0;
+  /* In styles.css, ADD this inside your @media (max-width: 768px) block */
+
+.daily-tip-section {
+    /* Reduces the vertical padding slightly on smaller screens */
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+}
+
+.tip-section-title {
+    font-size: 22px; /* A touch smaller for better mobile scaling */
+    margin-bottom: var(--space-lg); /* Adjusts the spacing for mobile */
+}
+
+.tip-container {
+    /* Ensures the tip fits well, even on very narrow screens */
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box; /* Prevents padding from causing overflow */
 }
 }
 
