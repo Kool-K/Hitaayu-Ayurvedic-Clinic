@@ -315,15 +315,32 @@ document.addEventListener('DOMContentLoaded', function () {
     // ];
 
     const tips = [
-    "Eat your largest meal at lunchtime when digestive fire (agni) is strongest.",
-    "For better digestion, enjoy a glass of buttermilk after your lunch.",
-    "Chew your food properly and avoid screen time while eating for better absorption.",
-    "For optimal digestion, fill your stomach 1/2 with solids and 1/4 with liquids.",
-    "An early and light dinner is one of the best habits for digestive health.",
-    "Did you know? Ayurveda recommends eating sweet foods at the start of your meal.",
+    "Eat your largest meal at lunch, when your digestive fire (Agni) is strongest.",
+    "Enjoy a glass of buttermilk after lunch to aid digestion.",
+    "Chew your food mindfully and avoid screen time while eating for better absorption.",
+    "For optimal digestion, fill your stomach 1/2 with solids and 1/4 with liquids, leaving 1/4 empty.",
+    "An early, light dinner is one of the best habits for digestive and overall health.",
+    "Did you know? Ayurveda suggests eating sweet foods at the beginning of your meal.",
     "Practice daily oil pulling with sesame oil to promote excellent oral health.",
-    "Take 5 deep breaths before each meal to prepare your body for digestion."
+    "Take 5 deep breaths before each meal to prepare your body for digestion.",
+    "Use medicated nasal drops (Nasya) daily to help prevent respiratory infections.",
+    "Incorporate gentle stretching into your day to feel more energized.",
+    "Keep track of your water intake; proper hydration is key to wellness.",
+    "Chanting 'Om' daily can help boost your energy levels and calm your mind.",
+    "Regulated breathing while chanting 'Om' sharpens focus and mental clarity.",
+    "Simple breathing exercises like 'Anulom Vilom' Pranayama can be done by anyone, anytime.",
+    "Take a brief, gentle walk after each meal whenever possible.",
+    "Treat every meal as a vital ritual. Don't just 'grab a bite'—nourish your body.",
+    "Proper eating involves chewing thoroughly, not gulping your food.",
+    "For better digestion and mindfulness, avoid talking while you eat.",
+    "Regularly perform simple eye exercises to combat screen-related strain."
 ];
+
+/*
+"Practise Kaval dharan -I.E. oil pulling or gargles like procedure daily",
+"Practise Gandush:- keeping mouthful of medicated liquid for a few minutes inside oral cavity.",
+"Kaval and Gandush help to cleanse oral cavity, prevent infection, strengthen facial muscle as well.",
+*/
 
     const tipText = document.querySelector('.tip-text');
     let currentTip = 0;
