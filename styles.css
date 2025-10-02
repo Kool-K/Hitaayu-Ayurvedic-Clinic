@@ -1157,6 +1157,8 @@ ul {
 
 .modal-header h2 {
   color: var(--white);
+  word-break: break-word; /* NEW: Allows long words to break and wrap */
+  hyphens: auto;          /* NEW: Adds hyphens for cleaner breaks */
 }
 
 .modal-body {
