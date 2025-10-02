@@ -2283,6 +2283,18 @@ ul {
   color: var(--peach);
 }
 
+.footer-developer a {
+    color: inherit; 
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    transition: var(--transition-fast);
+}
+
+.footer-developer a:hover {
+    color: var(--peach); 
+    border-color: var(--peach); 
+    transform: none; 
+}
+
 /* ==========================================================================
    13. Utility & Helper Classes
    ========================================================================== */
