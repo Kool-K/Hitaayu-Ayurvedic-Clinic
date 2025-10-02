@@ -206,6 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Show modal
             modal.style.display = 'block';
             document.body.classList.add('no-scroll');
+            history.pushState({ modalOpen: true }, null, "");
         });
     });
 
@@ -257,6 +258,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    window.addEventListener('popstate', function (event) {
+        // Check if the modal is currently visible
+        if (modal.style.display === 'block') {
+            closeModalFunc(); // If it is, close it
+        }
+    });
     // Product Details Toggle
     const productDetailBtns = document.querySelectorAll('.product-details-btn');
 
