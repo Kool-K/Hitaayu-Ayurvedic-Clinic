@@ -1155,10 +1155,18 @@ ul {
   border-top-right-radius: var(--border-radius-xl);
 }
 
-.modal-header h2 {
+/* .modal-header h2 {
   color: var(--white);
   word-break: break-word; /* NEW: Allows long words to break and wrap */
-  hyphens: auto;          /* NEW: Adds hyphens for cleaner breaks */
+  /* hyphens: auto;          NEW: Adds hyphens for cleaner breaks */
+/* } */ 
+
+.modal-header h2 {
+    color: var(--white);
+    white-space: nowrap;      /* NEW: Prevents the title from wrapping to a new line */
+    overflow: hidden;         /* NEW: Hides any part that might still overflow */
+    text-overflow: ellipsis;  /* NEW: Adds "..." if it's still too long (a failsafe) */
+    padding: 0 var(--space-lg); /* NEW: Adds some side padding for breathing room */
 }
 
 .modal-body {

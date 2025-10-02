@@ -113,6 +113,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalOverlay = document.querySelector('.modal-overlay');
     const modalTitle = document.getElementById('modal-title');
     const modalImage = document.getElementById('modal-image');
+
+    // Smartly adjusts modal title font size to fit on one line
+    function adjustModalTitleFontSize() {
+        const title = document.getElementById('modal-title');
+        const header = title.parentElement; // The .modal-header
+
+        // Reset font size to default to start the calculation
+        title.style.fontSize = '';
+
+        // Get the default font size from CSS variables (or set a fallback)
+        const baseFontSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--font-size-h3')) || 28;
+        title.style.fontSize = baseFontSize + 'px';
+
+        // Check if the title is overflowing its container
+        // We check scrollWidth (the actual content width) against clientWidth (the visible area width)
+        while (title.scrollWidth > header.clientWidth && baseFontSize > 12) {
+            // Reduce font size by 1px until it fits
+            title.style.fontSize = (parseFloat(title.style.fontSize) - 1) + 'px';
+        }
+    }
     // modal close on button click functionality
 
 
@@ -180,6 +200,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     modalTitle.textContent = 'Service Details';
                     document.getElementById('panchakarma-details').style.display = 'block';
             }
+
+            adjustModalTitleFontSize();
 
             // Show modal
             modal.style.display = 'block';
@@ -315,32 +337,32 @@ document.addEventListener('DOMContentLoaded', function () {
     // ];
 
     const tips = [
-    "Eat your largest meal at lunch, when your digestive fire (Agni) is strongest.",
-    "Enjoy a glass of buttermilk after lunch to aid digestion.",
-    "Chew your food mindfully and avoid screen time while eating for better absorption.",
-    "For optimal digestion, fill your stomach 1/2 with solids and 1/4 with liquids, leaving 1/4 empty.",
-    "An early, light dinner is one of the best habits for digestive and overall health.",
-    "Did you know? Ayurveda suggests eating sweet foods at the beginning of your meal.",
-    "Practice daily oil pulling with sesame oil to promote excellent oral health.",
-    "Take 5 deep breaths before each meal to prepare your body for digestion.",
-    "Use medicated nasal drops (Nasya) daily to help prevent respiratory infections.",
-    "Incorporate gentle stretching into your day to feel more energized.",
-    "Keep track of your water intake; proper hydration is key to wellness.",
-    "Chanting 'Aum' daily can help boost your energy levels and calm your mind.",
-    "Regulated breathing while chanting 'Aum' sharpens focus and mental clarity.",
-    "Simple breathing exercises like 'Anulom Vilom' Pranayama can be done by anyone, anytime.",
-    "Take a brief, gentle walk after each meal whenever possible.",
-    "Treat every meal as a vital ritual. Don't just 'grab a bite'—nourish your body.",
-    "Proper eating involves chewing thoroughly, not gulping your food.",
-    "For better digestion and mindfulness, avoid talking while you eat.",
-    "Regularly perform simple eye exercises to combat screen-related strain."
-];
+        "Eat your largest meal at lunch, when your digestive fire (Agni) is strongest.",
+        "Enjoy a glass of buttermilk after lunch to aid digestion.",
+        "Chew your food mindfully and avoid screen time while eating for better absorption.",
+        "For optimal digestion, fill your stomach 1/2 with solids and 1/4 with liquids, leaving 1/4 empty.",
+        "An early, light dinner is one of the best habits for digestive and overall health.",
+        "Did you know? Ayurveda suggests eating sweet foods at the beginning of your meal.",
+        "Practice daily oil pulling with sesame oil to promote excellent oral health.",
+        "Take 5 deep breaths before each meal to prepare your body for digestion.",
+        "Use medicated nasal drops (Nasya) daily to help prevent respiratory infections.",
+        "Incorporate gentle stretching into your day to feel more energized.",
+        "Keep track of your water intake; proper hydration is key to wellness.",
+        "Chanting 'Aum' daily can help boost your energy levels and calm your mind.",
+        "Regulated breathing while chanting 'Aum' sharpens focus and mental clarity.",
+        "Simple breathing exercises like 'Anulom Vilom' Pranayama can be done by anyone, anytime.",
+        "Take a brief, gentle walk after each meal whenever possible.",
+        "Treat every meal as a vital ritual. Don't just 'grab a bite'—nourish your body.",
+        "Proper eating involves chewing thoroughly, not gulping your food.",
+        "For better digestion and mindfulness, avoid talking while you eat.",
+        "Regularly perform simple eye exercises to combat screen-related strain."
+    ];
 
-/*
-"Practise Kaval dharan -I.E. oil pulling or gargles like procedure daily",
-"Practise Gandush:- keeping mouthful of medicated liquid for a few minutes inside oral cavity.",
-"Kaval and Gandush help to cleanse oral cavity, prevent infection, strengthen facial muscle as well.",
-*/
+    /*
+    "Practise Kaval dharan -I.E. oil pulling or gargles like procedure daily",
+    "Practise Gandush:- keeping mouthful of medicated liquid for a few minutes inside oral cavity.",
+    "Kaval and Gandush help to cleanse oral cavity, prevent infection, strengthen facial muscle as well.",
+    */
 
     const tipText = document.querySelector('.tip-text');
     let currentTip = 0;
