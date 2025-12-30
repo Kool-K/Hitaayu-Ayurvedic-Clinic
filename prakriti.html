@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Know Your Constitution (Prakriti) - Hitaayu</title>
+        <link rel="icon" href="assets/logo1bg.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="prakriti.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="main-navigation">
+                    <a href="index.html" class="logo">
+                        <div class="logo-img">
+                            <img src="assets/logo.png" alt="Hitaayu Logo">
+                        </div>
+                        <div class="logo-text">
+                            <h1>Hitaayu</h1>
+                        </div>
+                    </a>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html#home" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index.html#services" class="nav-link">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index.html#contact" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu-btn">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="prakriti-page">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Prakriti Parikshan</span>
+                    <h2 class="section-title">Know Your Constitution</h2>
+                    <div class="section-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="divider-line"></div>
+                    </div>
+                </div>
+                <div class="instruction-box animate__animated animate__fadeIn">
+                    <h4>
+                        <i class="fas fa-info-circle"></i>
+                        How to take this test
+                    </h4>
+                    <p>
+                        Please tick the option in each row that describes you the best or is applicable to you
+                        <strong>normally</strong>
+                        .
+                    </p>
+                    <p>
+                        <strong>Note:</strong>
+                        Answer based on your lifelong tendencies, not a temporary illness or your present condition. For example, if you normally sleep well but currently have insomnia, select the "Sound Sleep" option.
+                    </p>
+                </div>
+                <form id="prakriti-form">
+                    <div id="quiz-container"></div>
+                    <div class="form-action">
+                        <button type="button" id="calculate-prakriti" class="btn btn-primary btn-lg">Calculate My Prakriti</button>
+                    </div>
+                </form>
+                <div id="prakriti-result" class="result-modal">
+                    <div class="result-content">
+                        <button class="close-result">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div class="modal-scroll-area">
+                            <div class="result-header">
+                                <h3>Your Prakriti Analysis</h3>
+                                <p class="subtitle">Based on your physical and emotional traits</p>
+                            </div>
+                            <div class="chart-wrapper">
+                                <div class="pie-chart-container">
+                                    <div id="dosha-pie-chart" class="pie-chart"></div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="dot vata-dot"></span>
+                                        <div class="legend-text">
+                                            <span class="l-name">Vata</span>
+                                            <span class="l-percent" id="vata-percent">0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="dot pitta-dot"></span>
+                                        <div class="legend-text">
+                                            <span class="l-name">Pitta</span>
+                                            <span class="l-percent" id="pitta-percent">0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="dot kapha-dot"></span>
+                                        <div class="legend-text">
+                                            <span class="l-name">Kapha</span>
+                                            <span class="l-percent" id="kapha-percent">0%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="verdict-box">
+                                <p>Your Dominant Constitution is:</p>
+                                <h2 id="final-verdict">-</h2>
+                            </div>
+                            <p style="font-size: 11px; color: var(--text-color-light); line-height: 1.4; margin-bottom: 20px; padding: 0 10px;">
+                                <em>
+                                    <strong>Medical Disclaimer:</strong> This result is based on self-reported data and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment.
+                                </em>
+                            </p>
+                            <p class="result-desc">Knowing your constitution helps us design the perfect diet, lifestyle, and treatment plan specifically for you.</p>
+                            <div class="modal-footer">
+                                <a href="https://wa.me/+919850024010?text=Hi,%20I%20did%20my%20Prakriti%20check%20on%20Hitaayu.%20I%20am..." target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Discuss Report with Dr. Shilpa
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="menu-overlay"></div>
+        <script src="prakriti.js"></script>
+        <script src="script.js"></script>
+    </body>
+</body>
+</html>

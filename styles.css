@@ -450,12 +450,12 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg,
-      rgba(12, 151, 42, 0.6) 0%,
-      /* Semi-transparent Green */
-      rgba(43, 80, 170, 0.7) 100%
+  background: linear-gradient(
+    135deg,
+    rgba(12, 151, 42, 0.6) 0%,
+    /* Semi-transparent Green */ rgba(43, 80, 170, 0.7) 100%
       /* Semi-transparent Sapphire */
-    );
+  );
   z-index: 1;
 }
 
@@ -511,8 +511,6 @@ ul {
   background-color: var(--white);
   color: var(--green);
 }
-
-
 
 .tip-container {
   background-color: rgba(255, 255, 255, 0.9);
@@ -589,47 +587,49 @@ ul {
    5.5. Daily Tip Section
    ========================================================================== */
 .daily-tip-section {
-    padding: var(--space-xxl) var(--space-md);
-    background-color: var(--peach-tint);
-    display: flex;           /* Use flexbox for layout */
-    flex-direction: column;  /* Stack children vertically */
-    align-items: center;     /* Center children horizontally */
-    gap: var(--space-lg);      /* Creates space BETWEEN the title and the tip */
+  padding: var(--space-xxl) var(--space-md);
+  background-color: var(--peach-tint);
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  gap: var(--space-lg); /* Creates space BETWEEN the title and the tip */
 }
 /* ADD these new rules for the headline */
 
 .tip-section-title {
-    color: var(--green);
-    font-size: 24px;
-    font-family: var(--font-secondary);
-    font-weight: 600;
-    /* margin-bottom: var(--space-xl); INCREASED: More space below the title */
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    position: relative; /* Required for the decorative line */
-    padding-bottom: var(--space-sm); /* Adds space for the line */
+  color: var(--green);
+  font-size: 24px;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  /* margin-bottom: var(--space-xl); INCREASED: More space below the title */
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  position: relative; /* Required for the decorative line */
+  padding-bottom: var(--space-sm); /* Adds space for the line */
 }
 
 /* NEW: This adds the decorative line under the title */
 .tip-section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px; /* Adjust width of the line as you like */
-    height: 2px;
-    background-color: var(--peach);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Adjust width of the line as you like */
+  height: 2px;
+  background-color: var(--peach);
 }
 
 .tip-section-title i {
-    color: var(--peach);
+  color: var(--peach);
 }
 
 /* The .tip-container styles are now for the standalone section */
 .tip-container {
-  background-color: var(--white); /* Solid white looks cleaner on a solid background */
+  background-color: var(
+    --white
+  ); /* Solid white looks cleaner on a solid background */
   color: var(--text-color);
   padding: var(--space-md) var(--space-lg);
   border-radius: var(--border-radius-rounded);
@@ -640,7 +640,6 @@ ul {
   text-align: left; /* Keeps the text inside left-aligned */
   animation: float 6s ease-in-out infinite; /* Keeps the cool hover effect */
 }
-
 
 /* ==========================================================================
    6. About Section
@@ -888,7 +887,6 @@ ul {
 .specializations-info {
   text-align: center;
 }
-
 
 .specializations-info h3 {
   color: var(--sapphire);
@@ -1158,15 +1156,15 @@ ul {
 /* .modal-header h2 {
   color: var(--white);
   word-break: break-word; /* NEW: Allows long words to break and wrap */
-  /* hyphens: auto;          NEW: Adds hyphens for cleaner breaks */
-/* } */ 
+/* hyphens: auto;          NEW: Adds hyphens for cleaner breaks */
+/* } */
 
 .modal-header h2 {
-    color: var(--white);
-    white-space: nowrap;      /* NEW: Prevents the title from wrapping to a new line */
-    overflow: hidden;         /* NEW: Hides any part that might still overflow */
-    text-overflow: ellipsis;  /* NEW: Adds "..." if it's still too long (a failsafe) */
-    padding: 0 var(--space-lg); /* NEW: Adds some side padding for breathing room */
+  color: var(--white);
+  white-space: nowrap; /* NEW: Prevents the title from wrapping to a new line */
+  overflow: hidden; /* NEW: Hides any part that might still overflow */
+  text-overflow: ellipsis; /* NEW: Adds "..." if it's still too long (a failsafe) */
+  padding: 0 var(--space-lg); /* NEW: Adds some side padding for breathing room */
 }
 
 .modal-body {
@@ -1692,7 +1690,7 @@ ul {
   min-width: 180px;
   padding: var(--space-lg);
   background-color: transparent;
-  border: 1px solid var(--border-color); 
+  border: 1px solid var(--border-color);
   /* border: none; */
   cursor: pointer;
   font-weight: 500;
@@ -1941,33 +1939,31 @@ ul {
 /* --- New Contact Action Icons --- */
 /* In styles.css, replace the existing .contact-item rule */
 .contact-item {
-    margin-bottom: var(--space-md);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: var(--space-md); /* NEW: Adds spacing if items wrap */
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md); /* NEW: Adds spacing if items wrap */
 }
 
 /* In styles.css, REPLACE the existing .contact-item p rule */
 .contact-item p {
-    margin-bottom: 0;
-    flex-grow: 1; /* NEW: This is the key change that pushes the buttons away */
-    margin-right: var(--space-md); /* NEW: Ensures a minimum space */
+  margin-bottom: 0;
+  flex-grow: 1; /* NEW: This is the key change that pushes the buttons away */
+  margin-right: var(--space-md); /* NEW: Ensures a minimum space */
 }
 
 /* ADD this new rule for the button container */
 .contact-actions {
-    display: flex;
-    gap: var(--space-sm);
-    flex-shrink: 0; /* NEW: Prevents the buttons from getting squished */
+  display: flex;
+  gap: var(--space-sm);
+  flex-shrink: 0; /* NEW: Prevents the buttons from getting squished */
 }
 
 .contact-item:last-child {
   margin-bottom: 0;
 }
-
-
 
 .contact-actions {
   display: flex;
@@ -2347,15 +2343,15 @@ ul {
 }
 
 .footer-developer a {
-    color: inherit; 
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
-    transition: var(--transition-fast);
+  color: inherit;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  transition: var(--transition-fast);
 }
 
 .footer-developer a:hover {
-    color: var(--peach); 
-    border-color: var(--peach); 
-    transform: none; 
+  color: var(--peach);
+  border-color: var(--peach);
+  transform: none;
 }
 
 /* ==========================================================================
@@ -2492,7 +2488,6 @@ ul {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -2551,43 +2546,83 @@ ul {
   }
 }
 
+/* --- Laptops and Desktops (1024px and up) --- */
 @media (min-width: 1024px) {
+  /* 1. Use a 2-column flex layout for stability */
   .clinic-info-grid {
-    grid-template-columns: repeat(2, 1fr);
-    /* This creates a 2x2 grid */
-  }
-
-  .clinic-card-tagline {
-    grid-column: auto;
-  }
-
-  /* --- MODAL STYLES FOR TEXT WRAP --- */
-  .modal-body {
-    /* Switching back to flex for better control over image/text alignment */
     display: flex;
     flex-wrap: wrap;
-    /* Allows text to wrap below the image if needed */
-    justify-content: center;
-    /* This centers the image horizontally */
-    align-items: flex-start;
-    /* Aligns content at the top */
-    gap: var(--space-xl);
-    /* Add spacing between image and text */
+    gap: 30px; /* Stronger gap for a cleaner look */
+    align-items: flex-start; /* CRITICAL: Stops cards from stretching to match heights */
   }
 
+  /* 2. Philosophy Column (Left Side) */
+  .clinic-card-philosophy {
+    flex: 1 1 calc(50% - 15px); /* Takes half width */
+    order: 1;
+  }
+
+  /* 3. Approach Card (Right Side) */
+  .clinic-card-approach {
+    flex: 1 1 calc(50% - 15px); /* Takes half width */
+    order: 2;
+  }
+
+  /* 4. Stats Card (Left Side - under Philosophy) */
+  .clinic-card-stats {
+    flex: 1 1 calc(50% - 15px);
+    order: 3;
+    margin-top: -10px; /* Pulls it closer to Philosophy for a grouped feel */
+  }
+
+  /* 5. Specializations (Right Side - under Approach) */
+  .clinic-card:nth-child(4) {
+    flex: 1 1 calc(50% - 15px);
+    order: 4;
+    margin-top: -10px;
+  }
+
+  /* 6. Restore the "Card" Aesthetic */
+  .clinic-card {
+    text-align: left;
+    padding: 40px;
+    background-color: var(
+      --peach-tint
+    ); /* This brings back your original pink tint */
+    border: 1px solid rgba(0, 0, 0, 0.03); /* Subtle border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Kept the shadow so they still look like "cards" */
+    border-radius: var(--border-radius-lg);
+    line-height: 1.7;
+  }
+
+  .clinic-card h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--sapphire); /* Keep the professional blue title */
+    border-bottom: 2px solid var(--peach); /* Use the darker peach so it's visible on light pink */
+    padding-bottom: 10px; /* Space between the text and the line */
+    display: inline-block; /* Ensures the line only goes as wide as the text */
+    width: fit-content; /* Centers the line under the text */
+    margin-inline: auto; /* Centers the heading itself */
+  }
+
+  /* 7. Modal Logic (Keep this) */
+  .modal-body {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+  }
   .modal-image {
     width: 40%;
-    /* Image takes 40% of the available width */
     flex-shrink: 0;
-    /* Prevents image from shrinking */
-    /* REMOVED: float: left; margin-right: var(--space-xl); margin-bottom: var(--space-md); */
-    /* These float properties are no longer needed with flexbox */
+  }
+  .modal-info {
+    flex: 1;
   }
 }
 
 /* --- Small Tablets & Large Phones (Up to 992px) --- */
 @media (max-width: 992px) {
-
   /* Header & Mobile Nav */
   .mobile-menu-btn {
     display: flex;
@@ -2664,7 +2699,6 @@ ul {
 
 /* --- Mobile Devices (Up to 768px) --- */
 @media (max-width: 768px) {
-
   /* Base & Typography */
   .section-title {
     font-size: 28px;
@@ -2698,29 +2732,28 @@ ul {
 
   /* In styles.css, ADD this inside your @media (max-width: 768px) block */
 
-.daily-tip-section {
+  .daily-tip-section {
     /* Reduces the vertical padding slightly on smaller screens */
     padding-top: var(--space-xl);
     padding-bottom: var(--space-xl);
-}
+  }
 
-.tip-section-title {
+  .tip-section-title {
     font-size: 22px; /* A touch smaller for better mobile scaling */
     margin-bottom: var(--space-lg); /* Adjusts the spacing for mobile */
-}
+  }
 
-.tip-container {
+  .tip-container {
     /* Ensures the tip fits well, even on very narrow screens */
     width: 100%;
     max-width: 450px;
     box-sizing: border-box; /* Prevents padding from causing overflow */
-}
-.contact-item {
+  }
+  .contact-item {
     flex-direction: column; /* Stacks the text and buttons vertically */
-    align-items: center;    /* Centers them horizontally */
+    align-items: center; /* Centers them horizontally */
+  }
 }
-}
-
 
 /* About Section */
 .clinic-card {
